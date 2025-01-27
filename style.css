@@ -58,18 +58,18 @@ margin:0 20px;
     
     font-size: 70px;
     margin-top: 100px;
-    color: dodgerblue;
-
+color:dodgerblue;
 }
 
 .content p{
     
-     font-size: 30px;
+    font-size: 30px;
     margin: 100px;
     font-weight: 100;
     line-height: 40px;
     padding: 10px;
     background-color:black;
+        
 }
 
 .content h3{
@@ -85,8 +85,6 @@ margin:0 20px;
     font-size: 20px;
      list-style: none;
     
-            
-        
 }
 .gallery h2{
     
@@ -115,9 +113,9 @@ margin:0 20px;
     color: black;
 }
 
-.appointment h1{ 
-    margin:100px;
+.appointment h1{
+    
+    margin: 100px;
 }
-
 
 
