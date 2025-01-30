@@ -5,7 +5,7 @@
 .banner{
     width:100%;
     height:140vh;
-background-image:linear-gradient(rgba(0,0,0,0.15),rgba(0,0,0,0.5)),url(images/11200.jpeg);
+background-image:linear-gradient(rgba(0,0,0,0.15),rgba(0,0,0,0.5)),url(images/hhr.jpg);
 background-size: cover;
 background-position: center;
 background-attachment: fixed; }
@@ -68,7 +68,7 @@ color:dodgerblue;
     font-weight: 100;
     line-height: 40px;
     padding: 10px;
-    background-color:black;
+  
         
 }
 
@@ -120,6 +120,17 @@ color:dodgerblue;
     margin: 100px;
 }
 
+.blogpost-1 {
+    
+    margin: 50px;
+    background-color: black !important;
+}
 
+.blogpost-1 h1{
+    
+    text-decoration:none;
+}
+
+    
 
 
