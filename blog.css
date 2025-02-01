@@ -21,7 +21,7 @@ background-attachment: fixed; }
 .logo{cursor: pointer;}
 .navbar ul li{list-style: none;
 display: inline-block;
-margin:0 20px;
+margin:0 5px 30px;
     position: relative;
 }
 
