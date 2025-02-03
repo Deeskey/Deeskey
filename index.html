@@ -71,7 +71,7 @@ margin:0 10px 30px;
                display: flex;
                align-items: center;
                justify-content: space-evenly;
-               color:lightgray;
+               
                
                
                
@@ -91,7 +91,7 @@ margin:0 10px 30px;
                border: none;
                width: 120px;
                height: 5px;
-               background-color: lightgray;
+               background-color: dodgerblue;
                border-radius: 10px;
                margin-bottom: 20px;
            }
@@ -114,6 +114,26 @@ margin:0 10px 30px;
                height:140px;
                padding-top: 15px;
                border-radius: 20px;
+               
+           }
+           
+           .contact-inputs :focus {
+               
+               border: 2px solid dodgerblue;
+           }
+           
+           .contact-left button{
+               
+               display:flex;
+               align-items: center;
+               padding: 15px 30px;
+               font-size: 16px;
+               color: dodgerblue;
+               grid-gap: 10px;
+               border: none;
+               border-radius: 50px;
+               background-color: lightgray;
+               cursor: pointer;
                
            }
        </style>
@@ -175,11 +195,12 @@ margin:0 10px 30px;
     
     
     <div class="contact-container">
-    <form action="" class="contact-left">
+    <form action="https://api.web3forms.com/submit" method="POST" class="contact-left">
         <div class="contact-left-title"> 
         <h1>Contact us today!</h1>
             <hr>
         </div>
+        <input type="hidden" name="access_key" value="47bceb17-4e69-4fc3-90a0-353c32832950">
         <input type="text" name="name" placeholder="Name" class="contact-inputs" required>
         <input type="text" name="email" placeholder="Email" class="contact-inputs" required>
         <input type="text" name="phone" placeholder="Phone Number" class="contact-inputs" required>
