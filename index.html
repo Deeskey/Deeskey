@@ -58,13 +58,69 @@ margin:0 10px 30px;
                
            }
        
+           .contact{
+           
+           padding: 0;
+           margin: 0;
+               box-sizing: border-box;
+           }
+           
+           .contact-container {
+               
+               height: 100vh;
+               display: flex;
+               align-items: center;
+               justify-content: space-evenly;
+               color:lightgray;
+               
+               
+               
+           }
+           
+           .contact-left {
+               
+               display: flex;
+               flex-direction:column;
+               align-items: start;
+               grid-gap:20px;
+               
+           }
        
-       
+           .contact-left-title hr {
+               
+               border: none;
+               width: 120px;
+               height: 5px;
+               background-color: lightgray;
+               border-radius: 10px;
+               margin-bottom: 20px;
+           }
+           
+           .contact-inputs {
+               
+               width: 400px;
+               height: 50px;
+                   border: none;
+               outline: none;
+               padding-left: 25px;
+               font-weight: 500;
+               color:dodgerblue;
+               border-radius: 50px;
+               
+           }
+           
+           .contact-left textarea{
+               
+               height:140px;
+               padding-top: 15px;
+               border-radius: 20px;
+               
+           }
        </style>
        <div class="content">
        
        
-
+}
 
 
 <div class="services"><h2 id="services"> Services </h2>
@@ -110,9 +166,33 @@ margin:0 10px 30px;
 <div class="contact"><h2 id="contact"> Contact Us </h2>
        
        <h1> deeskeymt@hotmail.com</h1>
+    
            <h1>385-331-2946</h1>
            
-    <p>Contact us today!</p> 
+    
+    
+    
+    
+    
+    <div class="contact-container">
+    <form action="" class="contact-left">
+        <div class="contact-left-title"> 
+        <h1>Contact us today!</h1>
+            <hr>
+        </div>
+        <input type="text" name="name" placeholder="Name" class="contact-inputs" required>
+        <input type="text" name="email" placeholder="Email" class="contact-inputs" required>
+        <input type="text" name="phone" placeholder="Phone Number" class="contact-inputs" required>
+        <input type="text" name="adress" placeholder="Adress" class="contact-inputs" required>
+        <textarea name="message" placeholder="Message" class="contact-inputs" required></textarea>
+        <button type="submit"><img src="images/submit.PNG" alt=""> </button>
+        
+        
+        </form></div>
+    
+    
+    
+    
     
  <a class="socialicon" href="https://www.instagram.com/deeskey95/" target="blank"><img src="images/instagram%20icon.png"> </a>
     <a class="socialicon" href="https://www.facebook.com/profile.php?id=100078760184001" target="blank"><img src="images/fb%20icon.png"> </a>
