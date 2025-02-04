@@ -8,7 +8,15 @@
     <link rel="canonical" href="https://deeskey.com/index.html"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Deeskey</title>
-    <meta http-equiv="refresh" content="0; url=/index.html">
+
+    <!-- JavaScript for redirect -->
+    <script type="text/javascript">
+        // Check if the user is on the root page (https://deeskey.com/)
+        if (window.location.pathname === '/') {
+            // If they are, redirect them to the index.html page
+            window.location.replace('/index.html');
+        }
+    </script>
 </head>
 <body>
    <div class="banner">
