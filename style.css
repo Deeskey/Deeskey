@@ -131,231 +131,41 @@ body {
     text-decoration: none;
 }
 
-* {
-    margin: 0;
-    padding: 0;
-    font-family: sans-serif;
-}
+/* Services Section */
+.services ul li a{list-style: none;
 
-body {
-    background-color: black;
-}
-
-.banner {
-    width: 100%;
-    height: 140vh;
-    background-image: linear-gradient(rgba(0,0,0,0.15), rgba(0,0,0,0.5)), url(images/hhr.jpg);
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-}
-
-.navbar {
-    width: 100%;
-    margin: auto;
-    padding: 0px 0;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: black;
-}
-
-.logo {
-    cursor: pointer;
-}
-
-.navbar ul li {
-    list-style: none;
-    display: inline-block;
-    margin: 0 5px 30px;
-    position: relative;
-}
-
-.navbar ul li a {
-    text-decoration: none;
-    color: dodgerblue;
-    text-transform: uppercase;
-}
-
-.navbar ul li::after {
+margin:0 10px 30px;
+             position:relative; }
+           
+           .services a {
+               
+               
+               
+               text-decoration: none;
+               color:white;
+               
+               
+           }
+           .services ul li ::after{
+               
     content: '';
     height: 3px;
     width: 0%;
-    background: #ace;
-    position: absolute;
-    left: 0;
-    bottom: -10px;
-    transition: 0.5s;
-}
-
-.navbar ul li:hover::after {
-    width: 100%;
-}
-
-.content {
-    width: 100%;
-    top: 25%;
-    position: absolute;
-    text-decoration: none;
-    color: white;
-    transform: translateY(100);
-    text-align: center;
-}
-
-.content h2 {
-    font-size: 70px;
-    margin-top: 100px;
-    color: dodgerblue;
-}
-
-.content p {
-    font-size: 30px;
-    margin: 100px;
-    font-weight: 100;
-    line-height: 40px;
-    padding: 10px;
-}
-
-.content h3 {
-    font-size: 30px;
-    margin: 50px 300px 50px 300px;
-    background-color: black;
-}
-
-.content li {
-    margin: 50px;
-    font-size: 20px;
-    list-style: none;
-}
-
-.gallery h2 {
-    margin: 100px;
-}
-
-.contact h2 {
-    margin: 100px;
-}
-
-.contact h1 {
-    text-transform: uppercase;
-    margin: 50px;
-}
-
-.socialicon {
-    margin: 50px;
-    text-decoration: none;
-    transition: color 0.2s;
-}
-
-.socialicon:hover {
-    color: black;
-}
-
-.appointment h1 {
-    margin: 100px;
-}
-
-.blogpost-1 {
-    margin: 50px;
-    background-color: black !important;
-}
-
-.blogpost-1 h1 {
-    text-decoration: none;
-}
-
-/* Services Section */
-.services ul {
-    padding: 0;
-}
-
-.services ul li {
-    margin: 0 10px 30px;
-    position: relative;
-}
-
-.services ul li a {
-    text-decoration: none;
-    color: white; /* Sets text color to white */
-    font-weight: 500;
-}
-
-.services ul li a:hover {
-    color: dodgerblue; /* Sets hover color to dodgerblue */
-}
-
-.services ul li::after {
-    content: '';
-    height: 3px;
-    width: 0;
     background: dodgerblue;
     position: absolute;
     left: 0;
     bottom: -10px;
-    transition: width 0.3s ease;
-}
-
-.services ul li:hover::after {
-    width: 100%; /* Expands the line to full width on hover */
-}
-
-/* Contact Section */
-.contact-container {
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-}
-
-.contact-left {
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    grid-gap: 20px;
-}
-
-.contact-left-title hr {
-    border: none;
-    width: 100%;
-    height: 5px;
-    background-color: dodgerblue;
-    border-radius: 10px;
-    margin-bottom: 20px;
-}
-
-.contact-inputs {
-    width: 400px;
-    height: 50px;
-    border: none;
-    outline: none;
-    padding-left: 25px;
-    font-weight: 500;
-    color: dodgerblue;
-    border-radius: 50px;
-}
-
-.contact-left textarea {
-    height: 140px;
-    padding-top: 15px;
-    border-radius: 20px;
-}
-
-.contact-inputs:focus {
-    border: 3.5px solid dodgerblue;
-}
-
-.contact-left button {
-    display: flex;
-    align-items: center;
-    padding: 15px 30px;
-    font-size: 16px;
-    color: dodgerblue;
-    grid-gap: 10px;
-    border: none;
-    border-radius: 50px;
-    background-color: lightgray;
-    cursor: pointer;
-}
+    transition: 0.5s;
+           
+               
+           }
+           
+           .services ul li :hover::after{
+               
+               width: 100%;
+              
+               
+           }
 
 /* Contact Section */
 .contact-container {
