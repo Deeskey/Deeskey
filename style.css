@@ -132,6 +132,16 @@ body {
 }
 
 /* Services Section */
+
+.services h1{
+    
+    font-size: 30px;
+    margin: 100px;
+    font-weight: 100;
+    line-height: 40px;
+    padding: 10px;
+    
+}
 .services ul li a{list-style: none;
 
 margin:0 10px 30px;
