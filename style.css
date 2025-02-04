@@ -1,21 +1,22 @@
-/* General Reset */
 * {
     margin: 0;
     padding: 0;
     font-family: sans-serif;
 }
 
-/* Banner Section */
+body {
+    background-color: black;
+}
+
 .banner {
     width: 100%;
     height: 140vh;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.5)), url(images/hhr.jpg);
+    background-image: linear-gradient(rgba(0,0,0,0.15), rgba(0,0,0,0.5)), url(images/hhr.jpg);
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
 }
 
-/* Navbar Section */
 .navbar {
     width: 100%;
     margin: auto;
@@ -58,7 +59,6 @@
     width: 100%;
 }
 
-/* Content Section */
 .content {
     width: 100%;
     top: 25%;
@@ -95,12 +95,10 @@
     list-style: none;
 }
 
-/* Gallery Section */
 .gallery h2 {
     margin: 100px;
 }
 
-/* Contact Section */
 .contact h2 {
     margin: 100px;
 }
@@ -110,7 +108,6 @@
     margin: 50px;
 }
 
-/* Social Icons */
 .socialicon {
     margin: 50px;
     text-decoration: none;
@@ -121,12 +118,10 @@
     color: black;
 }
 
-/* Appointment Section */
 .appointment h1 {
     margin: 100px;
 }
 
-/* Blog Section */
 .blogpost-1 {
     margin: 50px;
     background-color: black !important;
@@ -136,7 +131,34 @@
     text-decoration: none;
 }
 
-/* Contact Form Section */
+/* Services Section */
+.services ul li a {
+    list-style: none;
+    margin: 0 10px 30px;
+    position: relative;
+}
+
+.services a {
+    text-decoration: none;
+    color: white;
+}
+
+.services ul li::after {
+    content: '';
+    height: 3px;
+    width: 0%;
+    background: dodgerblue;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+}
+
+.services ul li:hover::after {
+    width: 100%;
+}
+
+/* Contact Section */
 .contact-container {
     height: 100vh;
     display: flex;
@@ -192,9 +214,4 @@
     border-radius: 50px;
     background-color: lightgray;
     cursor: pointer;
-}
-
-/* General Body Styles */
-body {
-    background-color: black;
 }
