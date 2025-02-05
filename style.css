@@ -69,6 +69,16 @@ body {
     text-align: center;
 }
 
+.aboutme h1 {
+    
+    font-size: 30px;
+    margin: 100px;
+    font-weight: 100;
+    line-height: 40px;
+    padding: 10px;
+    
+}
+
 .content h2 {
     font-size: 70px;
     margin-top: 100px;
@@ -252,3 +262,23 @@ margin:0 10px 30px;
                    
                    margin: 0 30px;
                }
+
+.benefits li{ list-style: none;
+               
+               margin:50px;
+               display: inline;
+               
+               
+           }
+           
+           .text {
+               
+               margin: 50px;              
+               background-color: lightgray
+                   
+           }
+       
+           .text p{
+               
+               color: black;
+           }
