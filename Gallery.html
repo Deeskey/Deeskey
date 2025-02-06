@@ -1,78 +1,165 @@
 <!doctype html>
 <html>
 
-<head> 
+<head>
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" type="image/png" href="images/11192.jpeg">
     <meta charset="utf-8">
-    <title>Headlight Restoration</title>
+    <title>Gallery</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="canonical" href="https://deeskey.com/Gallery.html"/>
-</head>
-<body>
-    
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
 
-   <div class="banner">
-    <div class="navbar"> <img src="images/11194.jpeg" width="200" class="logo"> 
-      
-        
-        <ul> <li><a href="index.html">home</a></li>
-           <li><a href="About.html">About</a></li>
-           <li><a href="index.html#services">services</a></li>
-           <li><a href="index.html#appointment">appointment</a></li>
-           <li><a href="index.html#contact">contact</a></li>
-           <li><a href="blog.html">Blog</a></li>
-           
-        
-        </ul>
-       </div> 
-       
-       <div class="content">
-       
-    
-       
-      <div class="gallery"><h2 id="gallery"> Gallery </h2>
-           
-           <img src="images/11196.png" alt- "" srcset-"" width="400">
-           <img src="images/20140821_084430.jpg" alt- "" srcset-"" width="500">
-           <img src="images/11192.jpeg" alt- "" srcset-"" width="500">
-           <img src="images/image000000.jpg%20(1).jpeg" alt- "" srcset-"" width="500">
-           <img src="images/image000000.png%20(1).jpeg" alt- "" srcset-"" width="250">
-    <img src="images/image000002.jpg.jpeg" alt- "" srcset-"" width="350">
-    <img src="images/image000003.jpg.jpeg"alt- "" srcset-"" width="500" >
-    <img src="images/11985.jpeg"alt- "" srcset-"" width="300" >
-    <img src="images/11983.jpeg"alt- "" srcset-"" width="500" >
-    <img src="images/11984.jpeg"alt- "" srcset-"" width="500" >
-    <img src="images/11982.jpeg"alt- "" srcset-"" width="500" >
-    
-           </div> 
-           
-           
-           <a class="socialicon" href="https://www.instagram.com/deeskey95/" target="blank"><img src="images/instagram%20icon.png"alt- "" srcset-"" width="50"> </a>
-    <a class="socialicon" href="https://www.facebook.com/profile.php?id=100078760184001" target="blank"><img src="images/fb%20icon.png"alt- "" srcset-"" width="50"> </a>
-        <script id="setmore_script" type="text/javascript" src="https://storage.googleapis.com/fullintegration-live/webComponentAppListing/Container/setmoreIframeLive.js"></script><a style="float:none; " id="Setmore_button_iframe" href="https://booking.setmore.com/scheduleappointment/158111b7-2d72-4b56-a40f-4d221399d1cb"><img border="none" src="https://assets.setmore.com/setmore/images/2.0/Settings/book-now-black.svg" alt="Book an appointment with Deeskey Customs using Setmore"/></a> 
-</div>
+        .banner {
+            text-align: center;
+            padding: 20px;
+        }
 
+        .navbar img {
+            width: 200px;
+        }
 
+        .gallery {
+            width: 100%;
+            height: 100vh; /* Full viewport height */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            position: relative;
+        }
 
+        .gallery-images {
+            display: flex;
+            transition: transform 1s ease;
+        }
 
+        .gallery-images img {
+            width: 60%;  /* Adjust width to make images smaller */
+            max-width: 400px; /* Maximum width for images */
+            height: auto; /* Preserve aspect ratio */
+            object-fit: contain; /* Ensures images stay proportional */
+            margin: 0 10px;
+        }
 
+        .prev, .next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            font-size: 24px;
+            padding: 10px;
+            cursor: pointer;
+        }
 
+        .prev {
+            left: 10px;
+        }
 
+        .next {
+            right: 10px;
+        }
 
+        .bottombar {
+            text-align: center;
+            padding: 20px;
+        }
 
-
-
-<style>
-    body{background-color: black}
+        .social-icons a {
+            margin: 0 10px;
+        }
     </style>
-    
+</head>
+
+<body>
+    <div class="banner">
+        <div class="navbar">
+            <img src="images/11194.jpeg" class="logo"> 
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="About.html">About</a></li>
+                <li><a href="index.html#services">Services</a></li>
+                <li><a href="index.html#appointment">Appointment</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+                <li><a href="blog.html">Blog</a></li>
+            </ul>
         </div>
     
-   
+        <div class="content">
+            <h1 id="gallery">Gallery</h1>
+            <div class="gallery">
+                <div class="gallery-images">
+                    <img src="images/11196.png" alt="Image 1">
+                    <img src="images/20140821_084430.jpg" alt="Image 2">
+                    <img src="images/11192.jpeg" alt="Image 3">
+                    <img src="images/image000000.jpg%20(1).jpeg" alt="Image 4">
+                    <img src="images/image000000.png%20(1).jpeg" alt="Image 5">
+                    <img src="images/image000002.jpg.jpeg" alt="Image 6">
+                    <img src="images/image000003.jpg.jpeg" alt="Image 7">
+                    <img src="images/11985.jpeg" alt="Image 8">
+                    <img src="images/11983.jpeg" alt="Image 9">
+                    <img src="images/11984.jpeg" alt="Image 10">
+                    <img src="images/11982.jpeg" alt="Image 11">
+                    <img src="images/AUDI1.jpg" alt="Image 12">
+                    <img src="images/audi2.jpg" alt="Image 13">
+                    <img src="images/audi3.jpg" alt="Image 14">
+                    <img src="images/impala%20front.jpg" alt="Image 15">
+                    <img src="images/impala%20front.jpg" alt="Image 16">
+                    <img src="images/impala%20seats.PNG" alt="Image 17">
+                    <img src="images/gmcfront.jpg" alt="Image 18">
+                    <img src="images/gmcback.jpg" alt="Image 19">
+                    <img src="images/gmctrunk.jpg" alt="Image 20">
+                    <img src="images/cruzeback.jpg" alt="Image 21">
+                    <img src="images/cx5frontseat.jpg" alt="Image 22">
+                    <img src="images/cx5%20floor.jpg" alt="Image 23">
+                    <img src="images/journeyrear.jpg" alt="Image 24">
+                    <img src="images/malibufront.jpg" alt="Image 25">
+                    <img src="images/moms%20car.jpg" alt="Image 26">
+                </div>
+                <span class="prev" onclick="moveSlide(-1)">&#10094;</span>
+                <span class="next" onclick="moveSlide(1)">&#10095;</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="bottombar">
+        <div class="social-icons">
+            <a class="socialicon" href="https://www.instagram.com/deeskey95/" target="_blank">
+                <img src="images/instagram%20icon.png" alt="Instagram" width="50">
+            </a>
+            <a class="socialicon" href="https://www.facebook.com/profile.php?id=100078760184001" target="_blank">
+                <img src="images/fb%20icon.png" alt="Facebook" width="50">
+            </a>
+            <script id="setmore_script" type="text/javascript" src="https://storage.googleapis.com/fullintegration-live/webComponentAppListing/Container/setmoreIframeLive.js"></script>
+            <a id="Setmore_button_iframe" href="https://booking.setmore.com/scheduleappointment/158111b7-2d72-4b56-a40f-4d221399d1cb">
+                <img border="none" src="https://assets.setmore.com/setmore/images/2.0/Settings/book-now-black.svg" alt="Book an appointment with Deeskey Customs using Setmore"/>
+            </a>
+        </div>
+    </div>
+
+    <script>
+        let currentSlide = 0;
+        const images = document.querySelector('.gallery-images');
+        const totalImages = document.querySelectorAll('.gallery-images img').length;
+
+        function moveSlide(step) {
+            currentSlide = (currentSlide + step + totalImages) % totalImages;
+            images.style.transform = `translateX(-${currentSlide * 420}px)`; // Adjusted for smaller images
+        }
+
+        // Optional: Automatically cycle through the images every 3 seconds
+        setInterval(() => {
+            moveSlide(1);
+        }, 3000);
+    </script>
 
 </body>
-
-
-
 </html>
