@@ -265,8 +265,36 @@ body {
     }
 
     /* Services Section */
+    
+   /* Services Section h1 adjustments */
+.services h1 {
+    font-size: 30px;  /* Default font size */
+    margin: 100px;
+    font-weight: 100;
+    line-height: 40px;
+    padding: 10px;
+    text-align: center;  /* Center the text */
+}
+
+/* Media Query for Tablets (max-width: 768px) */
+@media (max-width: 768px) {
     .services h1 {
-        font-size: 25px;  /* Adjust font size for services */
+        font-size: 24px;  /* Reduce the font size for tablets */
+        margin: 50px 20px;  /* Reduce margin for smaller screens */
+        padding: 10px;
+        width: auto; /* Allow the h1 to take up available space */
+        text-align: center;  /* Ensure text is centered */
+    }
+}
+
+/* Media Query for Phones (max-width: 480px) */
+@media (max-width: 480px) {
+    .services h1 {
+        font-size: 20px;  /* Further reduce the font size on very small screens */
+        margin: 30px 10px;  /* Reduce margin for smaller screens */
+        padding: 10px;
+        width: auto; /* Ensure the h1 takes up full available width */
+        text-align: center;  /* Ensure text is centered */
     }
 
     .services ul li {
@@ -350,14 +378,14 @@ body {
     }
     
    
-/* Make the iframe responsive */
+/* Make the iframe container responsive */
 .iframe-container {
     position: relative;
     width: 100%;
-    padding-bottom: 56.25%;  /* Aspect ratio of 16:9 (height/width ratio), adjust if necessary */
     height: 0;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio (9 / 16 = 0.5625, which is 56.25%) */
+    margin-top: 20px; /* Adjust this to control space above the iframe */
     overflow: hidden;
-    background: #000;
 }
 
 .iframe-container iframe {
@@ -368,12 +396,29 @@ body {
     height: 100%;
 }
 
-/* Media query for mobile devices */
+/* For smaller screens (tablet and below) */
 @media (max-width: 768px) {
+    .iframe-container {
+        padding-bottom: 56.25%; /* Maintain 16:9 aspect ratio */
+        margin-top: 30px;  /* Add more space above the iframe */
+    }
+
     .iframe-container iframe {
-        width: 100% !important;  /* Ensures iframe takes up the full container width */
-        height: auto;  /* Adjust height automatically */
+        width: 100% !important;
+        height: 100%;
     }
 }
 
+/* For very small screens (phones in portrait mode) */
+@media (max-width: 480px) {
+    .iframe-container {
+        padding-bottom: 120%; /* Keep the 16:9 aspect ratio */
+        margin-top: 40px;  /* Add even more space on smaller screens */
+    }
+
+    .iframe-container iframe {
+        width: 100%;
+        height: 100%;
+    }
 }
+
