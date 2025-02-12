@@ -132,39 +132,27 @@ body {
 }
 
 /* Services Section */
-.services h1 {
-    font-size: 30px;
-    margin: 100px;
-    font-weight: 100;
-    line-height: 40px;
-    padding: 10px;
-}
-
-.services ul li a {
-    list-style: none;
-    margin: 0 10px 30px;
+.services ul li {
     position: relative;
-}
-
-.services a {
-    text-decoration: none;
-    color: white;
+    padding: 10px 0; /* Optional: Add some space inside each list item */
+    margin-bottom: 10px; /* Optional: Add some space between items */
 }
 
 .services ul li::after {
     content: '';
     height: 3px;
-    width: 0%;
+    width: 0%;  /* Start with zero width */
     background: dodgerblue;
     position: absolute;
     left: 0;
     bottom: -10px;
-    transition: 0.5s;
+    transition: width 0.5s ease;  /* Smooth transition on hover */
 }
 
 .services ul li:hover::after {
-    width: 100%;
+    width: 100%;  /* Expand to full width on hover */
 }
+
 
 /* Contact Section */
 .contact-container {
