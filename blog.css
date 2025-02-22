@@ -1,67 +1,171 @@
-*{
-    margin: 0;
-    padding: 0;
-    font-family: sans-serif;}
-.banner{
-    width:100%;
-    height:140vh;
-background-image:linear-gradient(rgba(0,0,0,0.15),rgba(0,0,0,0.5)),url(images/11200.jpeg);
-background-size: cover;
-background-position: center;
-background-attachment: fixed; }
-.navbar{
-    width: 100%;
-    margin: auto;
-    padding: 0px 0;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: black;
-}
-.logo{cursor: pointer;}
-.navbar ul li{list-style: none;
-display: inline-block;
-margin:0 5px 30px;
-    position: relative;
-}
+<!doctype html>
+<html>
 
-.navbar ul li a{
-    text-decoration: none;
-    color: dodgerblue;
-    text-transform: uppercase;
-}
-.navbar ul li::after{
+<head> 
+<link rel="stylesheet" href="blog.css">
+    <link rel="shortcut icon" type="image/png" href="images/11192.jpeg">
+<meta charset="utf-8">
+     <link rel="canonical" href="https://deeskey.com/blog.html"/>
+<title> Deeskey-blog </title>
+    <meta name="viewport" content="width=device-width, initial-scale=.4.8">
+</head>
+<body>
+   <div class="banner">
+    <div class="navbar"> <img src="images/11194.jpeg" width="200" class="logo"> 
+      
+              
+        <ul> <li><a href="index.html">home</a></li>
+           <li><a href="About.html">About</a></li>
+           <li><a href="index.html#services">services</a></li>
+           <li><a href="index.html#appointment">appointment</a></li>
+          <li><a href="Gallery.html">gallery</a></li>
+            <li><a href="index.html#contact">contact</a></li>
+           <li><a href="blog.html">Blog</a></li>
+           
+        
+        </ul>
+       </div> 
+       
+       <div class="content"> 
+           
+           
+           <style type= "text/css">
+               .img_deg 
+               
+               {
+                   
+                   float: left;
+                   margin: 30px;
+               }
+               
+               .pos_cen
+               {
+                   position: relative;
+                   width: 70%;
+                   margin-top: 100px;
+                       background-color: lightgrey;
+                   overflow: hidden;
+                       
+                   
+               }
+               
+             .img_deg2 
+               
+               {
+                   
+                   float: left;
+                   margin: 30px;
+               }
+               
+               .pos_cen2
+               {
+                   position: relative;
+                   top: 60px;
+                   height:70%;
+                   width: 70%;
+                   margin-top: 100px;
+                       background-color: lightgrey;
+                       overflow: hidden;
+                   
+               }
+               
+               .img_deg3 
+               
+               {
+                   
+                   float: left;
+                   margin: 30px;
+               }
+               
+               .pos_cen3
+               {
+                   position: relative;
+                   top: 85px;
+                   height: 290px;
+                   width: 70%;
+                   margin-top: 100px;
+                       background-color: lightgrey;
+                       overflow: hidden;
+                   
+               }
+               
+               .pos_cen4
+               {
+                   position: relative;
+                   top: 106px;
+                   height: 350px;
+                   width: 70%;
+                   margin-top: 100px;
+                       background-color: lightgrey;
+                       overflow: hidden;
+                   
+               }
+               
+               
+               .bottombar
+               {
+                   
+                   padding: 0;
+                   margin: 0;
+                   display: flex;                  
+                   justify-content: center;
+                   position: relative;
+                   top: 1000px;                                    
+                                   
+               }
+               
+               .bottombar li {
+                   
+                   
+                   margin: 0 30px;
+               }
+               
+              
+           </style>
+           <h2> Blog</h2>
+           
+         <div class="pos_cen"> <h1><a href="interiorhowto.html"> Step-by-Step Guide: Full Interior Car Detailing</a></h1>
+           <img class="img_deg" src="images/interiordetailblog.jpg" alt- "" srcset-"" width="460"> <p>Transform your vehicle’s interior into a fresh, clean, and inviting space with this easy-to-follow step-by-step guide. Whether you’re preparing for a long road trip or just want to enjoy a spotless cabin, this guide will walk you through every aspect of a professional-level interior detail you can do yourself. From vacuuming and cleaning upholstery to shining up your dashboard, you’ll learn the techniques and tools needed to leave your car looking as good as new.</p></div> 
+      
+           
+           <div class="pos_cen2"> <h1><a href="exteriordetail.html"> Step-by-Step Guide: Full Exterior Car Detailing</a></h1>
+           <img class="img_deg2" src="images/exterior detail.png" alt- "" srcset-"" width="250"> <p>Revitalize your car's exterior with this detailed, easy-to-follow guide! Whether you want to restore your vehicle’s shine or protect it from the elements, our step-by-step process will show you how to wash, polish, and protect your car’s paint like a pro. From a thorough hand wash to applying the perfect wax, this guide covers everything you need to keep your car looking brand new. With the right tools, products, and techniques, you’ll achieve that showroom finish yourself!</p></div> 
+       
+     
+           <div class="pos_cen3"> <h1><a href="myfirstcar.html"> How I Got My First Car</a></h1>
+           <img class="img_deg3" src="images/my first car.jpg" alt- "" srcset-"" width="250"> <p>The true story of how I got my first car at 14 years old!</p></div> 
+           
+           
+           <div class="pos_cen4"> <h1><a href="carwash.html"> Automated Car Washes vs. Professional Exterior Detail</a></h1>
+           <img class="img_deg3" src="images/carwash4.avif" alt- "" srcset-"" width="250"> <p>In this blog post, we’ll dive into why professional hand wash and detailing services are the superior choice when it comes to maintaining your car’s appearance and longevity. </p></div> 
+           
+           
+           
+           
+           
+           
+           
+           
+           
+           
+           <div class="bottombar">  <li><a class="socialicon" href="https://www.instagram.com/deeskey95/" target="blank"><img src="images/instagram%20icon.png"alt- "" srcset-"" width="50"> </a></li>
+    <li><a class="socialicon" href="https://www.facebook.com/profile.php?id=100078760184001" target="blank"><img src="images/fb%20icon.png"alt- "" srcset-"" width="50"> </a></li>
+    <li><script id="setmore_script" type="text/javascript" src="https://storage.googleapis.com/fullintegration-live/webComponentAppListing/Container/setmoreIframeLive.js"></script><a style="float:none; " id="Setmore_button_iframe" href="https://booking.setmore.com/scheduleappointment/158111b7-2d72-4b56-a40f-4d221399d1cb"><img border="none" src="https://assets.setmore.com/setmore/images/2.0/Settings/book-now-black.svg" alt="Book an appointment with Deeskey Customs using Setmore"/></a></li> </div> </div>  </div>
+
+
+
+
+
+
+
+
+
+
+<div>
+<style>
+    body{background-color: black}
+    </style>
     
-    content: '';
-    height: 3px;
-    width: 0%;
-    background: #ace;
-    position: absolute;
-    left: 0;
-    bottom: -10px;
-    transition: 0.5s;
-}
-.navbar ul li:hover::after{
-    width: 100%;
-}
-
-.content p{
-    
-    margin: 50px;
-    color: black;
-    font-size: 30px;
-}
-
-.content h1{
-    
-    color:dodgerblue;
-}
-
-    .content h2{
-    
-    font-size: 70px;
-    margin-top: 100px;
-color:dodgerblue;
-        text-align: center;
-}
-
+        </div>
+    </body>
+</html>
