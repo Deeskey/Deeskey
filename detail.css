@@ -1,0 +1,467 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+body {
+    background-color: black;
+}
+
+.banner {
+    width: 100%;
+    height: 140vh;
+    background-image: linear-gradient(rgba(0,0,0,0.15), rgba(0,0,0,0.5)), url(images/hhr.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.navbar {
+    width: 100%;
+    margin: auto;
+    padding: 0px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: black;
+}
+
+.logo {
+    cursor: pointer;
+}
+
+.navbar ul li {
+    list-style: none;
+    display: inline-block;
+    margin: 0 5px 30px;
+    position: relative;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: dodgerblue;
+    text-transform: uppercase;
+}
+
+.navbar ul li::after {
+    content: '';
+    height: 3px;
+    width: 0%;
+    background: #ace;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+}
+
+.navbar ul li:hover::after {
+    width: 100%;
+}
+
+.content {
+    width: 100%;
+    top: 25%;
+    position: absolute;
+    text-decoration: none;
+    color: white;
+    transform: translateY(100);
+    text-align: center;
+}
+
+.content h2 {
+    font-size: 70px;
+    margin-top: 100px;
+    color: dodgerblue;
+}
+
+.content p {
+    font-size: 30px;
+    margin: 100px;
+    font-weight: 100;
+    line-height: 40px;
+    padding: 10px;
+}
+
+.content h3 {
+    font-size: 30px;
+    margin: 50px 300px 50px 300px;
+    background-color: black;
+}
+
+.content li {
+    margin: 50px;
+    font-size: 20px;
+    list-style: none;
+}
+
+.gallery h2 {
+    margin: 100px;
+}
+
+.contact h2 {
+    margin: 100px;
+}
+
+.contact h1 {
+    text-transform: uppercase;
+    margin: 50px;
+}
+
+.socialicon {
+    margin: 50px;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.socialicon:hover {
+    color: black;
+}
+
+.appointment h1 {
+    margin: 100px;
+}
+
+.blogpost-1 {
+    margin: 50px;
+    background-color: black !important;
+}
+
+.blogpost-1 h1 {
+    text-decoration: none;
+}
+
+/* Services Section */
+
+ .services h1 {
+               
+                 font-size: 30px;
+                 margin: 100px;
+                 font-weight: 100;
+                 line-height: 40px;
+                 padding: 10px;
+               
+           }
+       
+.services ul li a{list-style: none;
+
+margin:0 10px 30px;
+             position:relative; }
+           
+           .services a {
+               
+               
+               
+               text-decoration: none;
+               color:white;
+               
+               
+           }
+           .services ul li ::after{
+               
+    content: '';
+    height: 3px;
+    width: 0%;
+    background: dodgerblue;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+           
+               
+           }
+           
+           .services ul li :hover::after{
+               
+               width: 100%;
+              
+               
+           }
+
+
+/* Contact Section */
+.contact-container {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.contact-left {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    grid-gap: 20px;
+}
+
+.contact-left-title hr {
+    border: none;
+    width: 100%;
+    height: 5px;
+    background-color: dodgerblue;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.contact-inputs {
+    width: 400px;
+    height: 50px;
+    border: none;
+    outline: none;
+    padding-left: 25px;
+    font-weight: 500;
+    color: dodgerblue;
+    border-radius: 50px;
+}
+
+.contact-left textarea {
+    height: 140px;
+    padding-top: 15px;
+    border-radius: 20px;
+}
+
+.contact-inputs:focus {
+    border: 3.5px solid dodgerblue;
+}
+
+.contact-left button {
+    display: flex;
+    align-items: center;
+    padding: 15px 30px;
+    font-size: 16px;
+    color: dodgerblue;
+    grid-gap: 10px;
+    border: none;
+    border-radius: 50px;
+    background-color: lightgray;
+    cursor: pointer;
+}
+
+/* Media Queries for Smaller Screens */
+
+/* For tablets and small screens */
+@media (max-width: 768px) {
+
+    /* Banner section adjustments */
+    .banner {
+        height: 100vh;  /* Reduce the height for smaller screens */
+    }
+
+    /* Navbar adjustments */
+    .navbar {
+        padding: 10px;
+        flex-direction: column; /* Stack items vertically */
+        align-items: center;
+    }
+
+    .navbar ul li {
+        margin: 10px 10px;
+         font-size: 10px;
+    }
+    
+     .navbar ul li a {
+        padding: 5px; /* Add some padding around the links */
+    }
+
+    /* Content adjustments */
+    .content h2 {
+        font-size: 50px;  /* Reduce the font size for headings */
+    }
+
+    .content p {
+        font-size: 20px;
+        margin: 30px; /* Adjust margin for mobile */
+    }
+
+    .content h3 {
+        font-size: 25px;
+        margin: 30px; /* Reduce margin */
+    }
+
+    .content li {
+        font-size: 18px;
+    }
+
+    /* Services Section */
+    
+   /* Services Section h1 adjustments */
+.services h1 {
+    font-size: 30px;  /* Default font size */
+    margin: 100px;
+    font-weight: 100;
+    line-height: 40px;
+    padding: 10px;
+    text-align: center;  /* Center the text */
+}
+
+/* Media Query for Tablets (max-width: 768px) */
+@media (max-width: 768px) {
+    .services h1 {
+        font-size: 24px;  /* Reduce the font size for tablets */
+        margin: 50px 20px;  /* Reduce margin for smaller screens */
+        padding: 10px;
+        width: auto; /* Allow the h1 to take up available space */
+        text-align: center;  /* Ensure text is centered */
+    }
+}
+
+/* Media Query for Phones (max-width: 480px) */
+@media (max-width: 480px) {
+    .services h1 {
+        font-size: 20px;  /* Further reduce the font size on very small screens */
+        margin: 30px 10px;  /* Reduce margin for smaller screens */
+        padding: 10px;
+        width: auto; /* Ensure the h1 takes up full available width */
+        text-align: center;  /* Ensure text is centered */
+    }
+
+    .services ul li {
+        font-size: 18px;
+    }
+
+    /* Contact Section */
+    .contact-container {
+        flex-direction: column;
+        padding: 20px; /* Add some padding for smaller screens */
+    }
+
+    .contact-left {
+        width: 100%; /* Allow the left column to take up full width */
+        align-items: center;
+    }
+
+    .contact-inputs {
+        width: 90%;  /* Make input fields smaller on mobile */
+    }
+
+    .contact-left textarea {
+        width: 90%;  /* Adjust textarea width */
+    }
+
+    .contact-left button {
+        font-size: 14px; /* Reduce button text size */
+        padding: 12px 20px;  /* Adjust button size */
+    }
+}
+
+/* For very small screens (phones in portrait mode) */
+@media (max-width: 480px) {
+
+    /* Banner section adjustments */
+    .banner {
+        height: 80vh;  /* Reduce height further */
+    }
+
+    /* Navbar adjustments */
+    .navbar ul li {
+        margin: 5px 0;
+    }
+
+    /* Content adjustments */
+    .content h2 {
+        font-size: 40px;  /* Reduce font size for even smaller screens */
+    }
+
+    .content p {
+        font-size: 18px;
+        margin: 20px; /* Reduce margin */
+    }
+
+    .content h3 {
+        font-size: 20px; /* Reduce heading size */
+    }
+
+    /* Services Section */
+    .services h1 {
+        font-size: 20px; /* Further reduce font size */
+    }
+
+    .services ul li {
+        font-size: 16px; /* Smaller font size */
+    }
+
+    /* Contact Section */
+    .contact-left {
+        width: 100%;
+        padding: 10px;  /* Adjust padding for smaller screens */
+    }
+
+    .contact-inputs, .contact-left textarea {
+        width: 100%;  /* Make input fields full-width */
+    }
+
+    .contact-left button {
+        font-size: 12px;  /* Smaller button text */
+        padding: 10px 15px;  /* Adjust button size */
+    }
+    
+   
+/* Make the iframe container responsive */
+.iframe-container {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio (9 / 16 = 0.5625, which is 56.25%) */
+    margin-top: 20px; /* Adjust this to control space above the iframe */
+    overflow: hidden;
+}
+
+.iframe-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* For smaller screens (tablet and below) */
+@media (max-width: 768px) {
+    .iframe-container {
+        padding-bottom: 56.25%; /* Maintain 16:9 aspect ratio */
+        margin-top: 30px;  /* Add more space above the iframe */
+    }
+
+    .iframe-container iframe {
+        width: 100% !important;
+        height: 100%;
+    }
+}
+
+/* For very small screens (phones in portrait mode) */
+@media (max-width: 480px) {
+    .iframe-container {
+        padding-bottom: 120%; /* Keep the 16:9 aspect ratio */
+        margin-top: 40px;  /* Add even more space on smaller screens */
+    }
+
+    .iframe-container iframe {
+        width: 95%;
+        height: 100%;
+    }
+    
+    /* Default styling for images inside .benefits */
+.benefits img {
+    width: 100%; /* Make sure the image takes up full width of its container */
+    height: auto; /* Maintain aspect ratio */
+    max-width: 300px; /* Limit the max width for larger screens */
+    display: block;
+    margin: 0 auto; /* Center the images */
+}
+
+/* Media Query for Tablets (max-width: 768px) */
+@media (max-width: 768px) {
+    .benefits img {
+        width: 80%; /* Make the images slightly smaller on tablets */
+        max-width: 200px; /* Limit the max width */
+        margin: 10px auto; /* Add some space around the images */
+    }
+}
+
+/* Media Query for Phones (max-width: 480px) */
+@media (max-width: 480px) {
+    .benefits img {
+        width: 70%; /* Make images smaller on phones */
+        max-width: 150px; /* Further limit the max width */
+        margin: 10px auto; /* Ensure some space around the images */
+    }
+}
