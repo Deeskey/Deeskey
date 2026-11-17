@@ -3,7 +3,7 @@
 
 <head>
     <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" type="image/png" href="images/11192.jpeg">
+    <link rel="shortcut icon" type="image/png" href="images/tiny%20logo.jpg">
     <meta charset="utf-8">
     <link rel="canonical" href="https://deeskey.com/index.html"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -22,7 +22,7 @@
 <body>
     <div class="banner">
         <div class="navbar">
-            <img src="images/das.png" width="200" class="logo">
+            <img src="images/mobile%20mechanic.jpg" width="200" class="logo">
             <ul>
                 <li><a href="About.html">About</a></li>
                 <li><a href="#services">Services</a></li>
@@ -50,67 +50,158 @@
 
 
         <div class="services">
-            <h2 id="services">Services</h2>
-            <h1>Deeskey Auto Service is a trusted mobile mechanic serving Spanish Fork, Springville, Provo, Orem, Payson, Salem, Mapleton, and surrounding Utah County areas. We provide convenient, hassle-free automotive maintenance and repair at your location. Our services include mobile oil changes, brake repair, tune-ups, steering and suspension repairs, diagnostics, and more  — all without the need to visit a shop.</h1>
-                <li><a href="Oilservice.html">Mobile Oil Change</a></li>                
-                <li><a href="maintenance.html">Maintenance</a></li>
-                <li><a href="mechanical.html">Mechanical</a></li>
-               
-            </ul>
-        </div>
+    <h2 id="services">Our Services</h2>
 
-        <div class="appointment">
-            <h2 id="appointment">Schedule Appointment</h2>
-            <p>
-                <script id="setmore_script" type="text/javascript" src="https://storage.googleapis.com/fullintegration-live/webComponentAppListing/Container/setmoreIframeLive.js"></script>
-                <a style="float:none;" id="Setmore_button_iframe" href="https://booking.setmore.com/scheduleappointment/158111b7-2d72-4b56-a40f-4d221399d1cb">
-                    <img border="none" src="https://assets.setmore.com/setmore/images/2.0/Settings/book-now-black.svg" alt="Book an appointment with Deeskey Customs using Setmore"/>
-                </a>
-            </p>
-        </div>
+    <p class="services-intro">
+        Deeskey Auto Service is a trusted mobile mechanic serving Spanish Fork,
+        Springville, Provo, Orem, Payson, Salem, Mapleton, and surrounding Utah
+        County areas. We provide convenient, hassle-free automotive maintenance
+        and repairs right at your location. No need to visit a repair shop!
+    </p>
 
-        <div class="contact">
-            <h2 id="contact">Contact Us</h2>
-            <p>deeskeymt@hotmail.com</p>
-            <p>(385) 331-2946</p>
+    <div class="service-grid">
 
-            <div class="contact-container">
-                <form action="https://api.web3forms.com/submit" method="POST" class="contact-left">
-                    <div class="contact-left-title">
-                        <p>Contact us today!</p>
-                        <hr>
-                    </div>
-                    <input type="hidden" name="access_key" value="47bceb17-4e69-4fc3-90a0-353c32832950">
-                    <input type="text" name="name" placeholder="Name" class="contact-inputs" required>
-                    <input type="text" name="email" placeholder="Email" class="contact-inputs" required>
-                    <input type="text" name="phone" placeholder="Phone Number" class="contact-inputs" required>
-                    <input type="text" name="adress" placeholder="Address" class="contact-inputs" required>
-                    <textarea name="message" placeholder="Message" class="contact-inputs" required></textarea>
-                    <button type="submit">Submit</button>
-                </form>
-            </div>
-
-         <div class="bottombar">
-    <!-- Social Icons Section -->
-    <div class="social-icons">
-        <a class="socialicon" href="https://www.instagram.com/deeskey95/" target="_blank">
-            <img src="images/instagram%20icon.png" alt="Instagram" width="50">
+        <a href="Oilservice.html" class="service-card">
+            <img src="images/oil-change.jpg" alt="Mobile oil change service">
+            <h3>Mobile Oil Changes</h3>
+            <p>Convenient oil and filter changes right at your location.</p>
         </a>
-        <a class="socialicon" href="https://www.facebook.com/profile.php?id=100078760184001" target="_blank">
-            <img src="images/fb%20icon.png" alt="Facebook" width="50">
+
+        <a href="maintenance.html" class="service-card">
+            <img src="images/maintenance.jpg" alt="Automotive maintenance">
+            <h3>Mobile Maintenance</h3>
+            <p>Routine maintenance, filters, spark plugs, belts, and more.</p>
         </a>
+
+        <a href="mechanical.html" class="service-card">
+            <img src="images/brakes.jpg" alt="Brake pad and rotor replacement">
+            <h3>Brake Services</h3>
+            <p>Brake pads, rotors, inspections, and brake repairs.</p>
+        </a>
+
+        <a href="mechanical.html" class="service-card">
+            <img src="images/mechanical.jpg" alt="Automotive mechanical repair">
+            <h3>Mechanical Repairs</h3>
+            <p>Engine repairs, cooling systems, leaks, and more.</p>
+        </a>
+
+        <a href="mechanical.html" class="service-card">
+            <img src="images/electrical.jpg" alt="Automotive electrical diagnostics">
+            <h3>Electrical & Charging</h3>
+            <p>Batteries, alternators, starters, and electrical issues.</p>
+        </a>
+
+        <a href="mechanical.html" class="service-card">
+            <img src="images/diagnostics.jpg" alt="Mechanic performing vehicle diagnostics">
+            <h3>Diagnostics & Troubleshooting</h3>
+            <p>Check engine lights, no-start issues, and vehicle diagnostics.</p>
+        </a>
+
     </div>
+
+    <p class="services-footer">
+        Don't see what you're looking for? Contact us!
+        We offer a wide range of mobile automotive repair services.
+    </p>
 </div>
 
+        
+<div class="appointment">
+    <h2 id="appointment">Schedule Appointment</h2>
+
+    <!-- Start of Housecall Pro Online Booking Button -->
+    <button
+        data-token="21091dc646ac4166a3d72752976aa281"
+        data-orgname="Deeskey-Auto-Service"
+        class="hcp-button"
+        onclick="HCPWidget.openModal()">
+        Book Online
+    </button>
+
+    <script async src="https://online-booking.housecallpro.com/script.js?token=21091dc646ac4166a3d72752976aa281&orgName=Deeskey-Auto-Service">
+    </script>
+    <!-- End of Housecall Pro Online Booking Button -->
+
+</div>
+
+
+       
+<div class="contact">
+    <h2 id="contact">Contact Us</h2>
+
+    <p>Have questions or need automotive repairs?</p>
+    <p>Get in touch with Deeskey Auto Service!</p>
+
+    <p>
+        <a href="mailto:deeskeymt@hotmail.com">
+            deeskeymt@hotmail.com
+        </a>
+    </p>
+
+    <p>
+        <a href="tel:3853312946">
+            (385) 331-2946
+        </a>
+    </p>
+
+    <div class="contact-container">
+
+        <div class="contact-left">
+
+            <div class="contact-left-title">
+                <h3>Request Service</h3>
+                <p>Tell us what your vehicle needs!</p>
+                <hr>
+            </div>
+
+            <!-- Start of Housecall Pro Lead Capture -->
+
+            <script async src="https://online-booking.housecallpro.com/script.js?token=7aab2044499a4e8d910e0e03a011c66c&orgName=Deeskey-Auto-Service">
+            </script>
+
+            <iframe
+                id="hcp-lead-iframe"
+                title="Deeskey Auto Service Contact Form"
+                src="https://book.housecallpro.com/lead-form/Deeskey-Auto-Service/7aab2044499a4e8d910e0e03a011c66c"
+                style="border: none; width: 100%; min-height: 650px;">
+            </iframe>
+
+            <!-- End of Housecall Pro Lead Capture -->
+
+        </div>
+
+    </div>
+
+    <div class="bottombar">
+
+        <div class="social-icons">
+
+            <a class="socialicon"
+               href="https://www.instagram.com/deeskey95/"
+               target="_blank"
+               rel="noopener noreferrer">
+                <img src="images/instagram%20icon.png"
+                     alt="Instagram"
+                     width="50">
+            </a>
+
+            <a class="socialicon"
+               href="https://www.facebook.com/profile.php?id=100078760184001"
+               target="_blank"
+               rel="noopener noreferrer">
+                <img src="images/fb%20icon.png"
+                     alt="Facebook"
+                     width="50">
+            </a>
+
+        </div>
+
+    </div>
+
         </div>
     </div>
 
-    
 </body>
-
 </html>
-
-
-
 
 
