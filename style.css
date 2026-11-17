@@ -1,26 +1,45 @@
+
+/* ==============================
+   GENERAL STYLING
+============================== */
+
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
     font-family: sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
     background-color: black;
+    color: white;
+    overflow-x: hidden;
 }
 
 .banner {
     width: 100%;
-    height: 140vh;
-    background-image: linear-gradient(rgba(0,0,0,0.15), rgba(0,0,0,0.5)), url(images/ats2.jpeg);
+    height: 80vh;
+
+    background-image: url("images/ats2.jpg");
+
     background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
+    background-position: 35% center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
 }
+
+/* ==============================
+   NAVIGATION BAR
+============================== */
 
 .navbar {
     width: 100%;
     margin: auto;
-    padding: 0px 0;
+    padding: 10px 20px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -29,12 +48,20 @@ body {
 
 .logo {
     cursor: pointer;
+    max-width: 200px;
+    height: auto;
+}
+
+.navbar ul {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
 .navbar ul li {
     list-style: none;
     display: inline-block;
-    margin: 0 5px 30px;
+    margin: 0 10px;
     position: relative;
 }
 
@@ -42,13 +69,14 @@ body {
     text-decoration: none;
     color: dodgerblue;
     text-transform: uppercase;
+    font-size: 15px;
 }
 
 .navbar ul li::after {
     content: '';
     height: 3px;
     width: 0%;
-    background: #ace;
+    background: dodgerblue;
     position: absolute;
     left: 0;
     bottom: -10px;
@@ -59,139 +87,199 @@ body {
     width: 100%;
 }
 
+/* ==============================
+   MAIN CONTENT
+============================== */
+
 .content {
     width: 100%;
-    top: 25%;
-    position: absolute;
+    position: relative;
     text-decoration: none;
     color: white;
-    transform: translateY(100);
     text-align: center;
 }
 
 .content h2 {
-    font-size: 70px;
-    margin-top: 100px;
+    font-size: 60px;
+    margin: 60px 20px 30px;
     color: dodgerblue;
 }
 
 .content p {
-    font-size: 30px;
-    margin: 100px;
+    font-size: 20px;
+    margin: 25px auto;
     font-weight: 100;
-    line-height: 40px;
+    line-height: 1.6;
     padding: 10px;
+    max-width: 1100px;
 }
 
 .content h3 {
     font-size: 30px;
-    margin: 50px 300px 50px 300px;
+    margin: 50px auto;
     background-color: black;
 }
 
 .content li {
-    margin: 50px;
+    margin: 30px;
     font-size: 20px;
     list-style: none;
 }
 
-.gallery h2 {
-    margin: 100px;
+/* ==============================
+   VIDEO
+============================== */
+
+.iframe-container {
+    position: relative;
+    width: 90%;
+    max-width: 900px;
+    aspect-ratio: 16 / 9;
+    margin: 30px auto;
+    overflow: hidden;
 }
 
+.iframe-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+/* ==============================
+   SERVICES SECTION
+============================== */
+
+.services {
+    width: 90%;
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 30px 0;
+    text-align: center;
+}
+
+.services h2 {
+    font-size: 45px;
+    color: dodgerblue;
+    margin: 20px 0 25px;
+}
+
+.services-intro {
+    font-size: 19px;
+    line-height: 1.7;
+    font-weight: 300;
+    max-width: 1050px;
+    margin: 0 auto 40px;
+    padding: 10px;
+}
+
+/* Service card grid */
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin: 40px auto;
+}
+
+.service-card {
+    display: block;
+    text-decoration: none;
+    color: white;
+    background-color: #111;
+    border: 1px solid #252525;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease,
+                border-color 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-6px);
+    border-color: dodgerblue;
+    box-shadow: 0 8px 20px rgba(30,144,255,0.2);
+}
+
+.service-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+}
+
+.service-card h3 {
+    font-size: 22px;
+    color: dodgerblue;
+    margin: 20px 10px 10px;
+    background: none;
+}
+
+.service-card p {
+    font-size: 16px;
+    line-height: 1.6;
+    padding: 0 15px 20px;
+    margin: 0 auto;
+}
+
+.services-footer {
+    font-size: 18px;
+    line-height: 1.6;
+    margin: 40px auto;
+}
+
+/* ==============================
+   GALLERY
+============================== */
+
+.gallery h2 {
+    margin: 60px 20px;
+    color: dodgerblue;
+}
+
+/* ==============================
+   APPOINTMENT
+============================== */
+
+.appointment h1 {
+    margin: 50px;
+}
+
+.appointment h2 {
+    color: dodgerblue;
+}
+
+/* ==============================
+   CONTACT SECTION
+============================== */
+
 .contact h2 {
-    margin: 100px;
+    margin: 60px 20px;
+    color: dodgerblue;
 }
 
 .contact h1 {
     text-transform: uppercase;
-    margin: 50px;
+    margin: 30px;
 }
 
-.socialicon {
-    margin: 50px;
-    text-decoration: none;
-    transition: color 0.2s;
-}
-
-.socialicon:hover {
-    color: black;
-}
-
-.appointment h1 {
-    margin: 100px;
-}
-
-.blogpost-1 {
-    margin: 50px;
-    background-color: black !important;
-}
-
-.blogpost-1 h1 {
-    text-decoration: none;
-}
-
-/* Services Section */
-
- .services h1 {
-               
-                 font-size: 30px;
-                 margin: 100px;
-                 font-weight: 100;
-                 line-height: 40px;
-                 padding: 10px;
-               
-           }
-       
-.services ul li a{list-style: none;
-
-margin:0 10px 30px;
-             position:relative; }
-           
-           .services a {
-               
-               
-               
-               text-decoration: none;
-               color:white;
-               
-               
-           }
-           .services ul li ::after{
-               
-    content: '';
-    height: 3px;
-    width: 0%;
-    background: dodgerblue;
-    position: absolute;
-    left: 0;
-    bottom: -10px;
-    transition: 0.5s;
-           
-               
-           }
-           
-           .services ul li :hover::after{
-               
-               width: 100%;
-              
-               
-           }
-
-
-/* Contact Section */
 .contact-container {
-    height: 100vh;
+    min-height: 500px;
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: center;
+    padding: 30px;
 }
 
 .contact-left {
     display: flex;
     flex-direction: column;
     align-items: start;
-    grid-gap: 20px;
+    gap: 20px;
+    width: 100%;
+    max-width: 500px;
 }
 
 .contact-left-title hr {
@@ -204,7 +292,7 @@ margin:0 10px 30px;
 }
 
 .contact-inputs {
-    width: 400px;
+    width: 100%;
     height: 50px;
     border: none;
     outline: none;
@@ -218,10 +306,11 @@ margin:0 10px 30px;
     height: 140px;
     padding-top: 15px;
     border-radius: 20px;
+    resize: vertical;
 }
 
 .contact-inputs:focus {
-    border: 3.5px solid dodgerblue;
+    border: 3px solid dodgerblue;
 }
 
 .contact-left button {
@@ -230,241 +319,309 @@ margin:0 10px 30px;
     padding: 15px 30px;
     font-size: 16px;
     color: dodgerblue;
-    grid-gap: 10px;
+    gap: 10px;
     border: none;
     border-radius: 50px;
     background-color: lightgray;
     cursor: pointer;
 }
 
-/* Media Queries for Smaller Screens */
+.contact-left button:hover {
+    background-color: dodgerblue;
+    color: white;
+}
 
-/* For tablets and small screens */
-@media (max-width: 768px) {
+/* ==============================
+   SOCIAL MEDIA
+============================== */
 
-    /* Banner section adjustments */
-    .banner {
-        height: 100vh;  /* Reduce the height for smaller screens */
+.socialicon {
+    display: inline-block;
+    margin: 30px;
+    text-decoration: none;
+    transition: transform 0.2s;
+}
+
+.socialicon:hover {
+    transform: scale(1.1);
+}
+
+.socialicon img {
+    max-width: 50px;
+    height: auto;
+}
+
+.bottombar {
+    padding: 20px;
+}
+
+/* ==============================
+   BLOG
+============================== */
+
+.blogpost-1 {
+    margin: 50px;
+    background-color: black !important;
+}
+
+.blogpost-1 h1 {
+    text-decoration: none;
+}
+
+/* ==============================
+   TABLETS
+============================== */
+
+@media screen and (max-width: 900px) {
+
+    .navbar {
+        flex-direction: column;
+        padding: 10px;
     }
 
-    /* Navbar adjustments */
-    .navbar {
-        padding: 10px;
-        flex-direction: column; /* Stack items vertically */
-        align-items: center;
+    .navbar ul {
+        justify-content: center;
     }
 
     .navbar ul li {
-        margin: 10px 10px;
-         font-size: 10px;
-    }
-    
-     .navbar ul li a {
-        padding: 5px; /* Add some padding around the links */
+        margin: 12px 8px;
     }
 
-    /* Content adjustments */
+    .service-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .banner {
+        background-attachment: scroll;
+    }
+}
+
+/* ==============================
+   MOBILE PHONES
+============================== */
+
+@media screen and (max-width: 600px) {
+
+    .banner {
+        height: 80vh;
+        background-attachment: scroll;
+    }
+
+    .navbar {
+        padding: 10px 5px;
+    }
+
+    .logo {
+        max-width: 160px;
+    }
+
+    .navbar ul {
+        justify-content: center;
+    }
+
+    .navbar ul li {
+        margin: 8px 5px;
+    }
+
+    .navbar ul li a {
+        font-size: 11px;
+    }
+
     .content h2 {
-        font-size: 50px;  /* Reduce the font size for headings */
+        font-size: 38px;
+        margin: 40px 10px 20px;
     }
 
     .content p {
-        font-size: 20px;
-        margin: 30px; /* Adjust margin for mobile */
+        font-size: 17px;
+        margin: 15px auto;
+        padding: 10px 15px;
+        line-height: 1.6;
     }
 
     .content h3 {
-        font-size: 25px;
-        margin: 30px; /* Reduce margin */
+        font-size: 22px;
+        margin: 25px;
     }
 
     .content li {
-        font-size: 18px;
+        font-size: 16px;
+        margin: 20px;
     }
 
-    /* Services Section */
-    
-   /* Services Section h1 adjustments */
-.services h1 {
-    font-size: 30px;  /* Default font size */
-    margin: 100px;
-    font-weight: 100;
-    line-height: 40px;
-    padding: 10px;
-    text-align: center;  /* Center the text */
-}
+    /* Services */
 
-/* Media Query for Tablets (max-width: 768px) */
-@media (max-width: 768px) {
-    .services h1 {
-        font-size: 24px;  /* Reduce the font size for tablets */
-        margin: 50px 20px;  /* Reduce margin for smaller screens */
-        padding: 10px;
-        width: auto; /* Allow the h1 to take up available space */
-        text-align: center;  /* Ensure text is centered */
-    }
-}
-
-/* Media Query for Phones (max-width: 480px) */
-@media (max-width: 480px) {
-    .services h1 {
-        font-size: 20px;  /* Further reduce the font size on very small screens */
-        margin: 30px 10px;  /* Reduce margin for smaller screens */
-        padding: 10px;
-        width: auto; /* Ensure the h1 takes up full available width */
-        text-align: center;  /* Ensure text is centered */
+    .services {
+        width: 92%;
+        margin: 30px auto;
     }
 
-    .services ul li {
-        font-size: 18px;
+    .services h2 {
+        font-size: 34px;
     }
 
-    /* Contact Section */
+    .services-intro {
+        font-size: 16px;
+        padding: 5px;
+    }
+
+    .service-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .service-card img {
+        height: 210px;
+    }
+
+    .service-card h3 {
+        font-size: 21px;
+    }
+
+    .service-card p {
+        font-size: 16px;
+    }
+
+    .services-footer {
+        font-size: 16px;
+    }
+
+    /* Video */
+
+    .iframe-container {
+        width: 95%;
+        margin: 20px auto;
+    }
+
+    /* Contact */
+
     .contact-container {
+        min-height: auto;
         flex-direction: column;
-        padding: 20px; /* Add some padding for smaller screens */
+        padding: 20px;
     }
 
     .contact-left {
-        width: 100%; /* Allow the left column to take up full width */
+        width: 100%;
         align-items: center;
+        padding: 10px;
     }
 
     .contact-inputs {
-        width: 90%;  /* Make input fields smaller on mobile */
+        width: 100%;
     }
 
     .contact-left textarea {
-        width: 90%;  /* Adjust textarea width */
+        width: 100%;
     }
 
     .contact-left button {
-        font-size: 14px; /* Reduce button text size */
-        padding: 12px 20px;  /* Adjust button size */
+        font-size: 14px;
+        padding: 12px 20px;
+    }
+
+    .contact h2 {
+        margin: 40px 10px;
+        font-size: 35px;
+    }
+
+    .socialicon {
+        margin: 15px;
+    }
+
+    .appointment h1 {
+        margin: 30px 10px;
+    }
+
+    .blogpost-1 {
+        margin: 20px;
     }
 }
 
-/* For very small screens (phones in portrait mode) */
-@media (max-width: 480px) {
 
-    /* Banner section adjustments */
-    .banner {
-        height: 80vh;  /* Reduce height further */
+/* HOUSECALL PRO CONTACT FORM */
+
+.contact {
+    text-align: center;
+    padding: 30px 15px;
+}
+
+.contact > p {
+    font-size: 18px;
+    margin: 12px auto;
+}
+
+.contact > p a {
+    color: dodgerblue;
+    text-decoration: none;
+}
+
+.contact > p a:hover {
+    text-decoration: underline;
+}
+
+.contact-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    min-height: auto;
+    padding: 20px;
+}
+
+.contact-left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 650px;
+    gap: 20px;
+}
+
+.contact-left-title {
+    width: 100%;
+    text-align: center;
+}
+
+.contact-left-title h3 {
+    color: dodgerblue;
+    font-size: 28px;
+    margin: 10px;
+}
+
+.contact-left-title p {
+    font-size: 17px;
+    margin: 15px;
+}
+
+.contact-left-title hr {
+    width: 100%;
+    max-width: 300px;
+    margin: 15px auto;
+}
+
+#hcp-lead-iframe {
+    width: 100%;
+    min-height: 650px;
+    background-color: white;
+    border-radius: 10px;
+}
+
+@media screen and (max-width: 600px) {
+
+    .contact-container {
+        padding: 10px 0;
     }
 
-    /* Navbar adjustments */
-    .navbar ul li {
-        margin: 5px 0;
-    }
-
-    /* Content adjustments */
-    .content h2 {
-        font-size: 40px;  /* Reduce font size for even smaller screens */
-    }
-
-    .content p {
-        font-size: 18px;
-        margin: 20px; /* Reduce margin */
-    }
-
-    .content h3 {
-        font-size: 20px; /* Reduce heading size */
-    }
-
-    /* Services Section */
-    .services h1 {
-        font-size: 20px; /* Further reduce font size */
-    }
-
-    .services ul li {
-        font-size: 16px; /* Smaller font size */
-    }
-
-    /* Contact Section */
     .contact-left {
         width: 100%;
-        padding: 10px;  /* Adjust padding for smaller screens */
     }
 
-    .contact-inputs, .contact-left textarea {
-        width: 100%;  /* Make input fields full-width */
+    #hcp-lead-iframe {
+        min-height: 750px;
     }
 
-    .contact-left button {
-        font-size: 12px;  /* Smaller button text */
-        padding: 10px 15px;  /* Adjust button size */
-    }
-    
-   
-/* Make the iframe container responsive */
-.iframe-container {
-    position: relative;
-    width: 100%;
-    height: 0;
-    padding-bottom: 56.25%; /* 16:9 aspect ratio (9 / 16 = 0.5625, which is 56.25%) */
-    margin-top: 20px; /* Adjust this to control space above the iframe */
-    overflow: hidden;
-}
-
-.iframe-container iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
-
-/* For smaller screens (tablet and below) */
-@media (max-width: 768px) {
-    .iframe-container {
-        padding-bottom: 56.25%; /* Maintain 16:9 aspect ratio */
-        margin-top: 30px;  /* Add more space above the iframe */
-    }
-
-    .iframe-container iframe {
-        width: 100% !important;
-        height: 100%;
+    .contact-left-title h3 {
+        font-size: 24px;
     }
 }
-
-/* For very small screens (phones in portrait mode) */
-@media (max-width: 480px) {
-    .iframe-container {
-        padding-bottom: 120%; /* Keep the 16:9 aspect ratio */
-        margin-top: 40px;  /* Add even more space on smaller screens */
-    }
-
-    .iframe-container iframe {
-        width: 100%;
-        height: 100%;
-    }
-    
-    /* Default styling for images inside .benefits */
-.benefits img {
-    width: 100%; /* Make sure the image takes up full width of its container */
-    height: auto; /* Maintain aspect ratio */
-    max-width: 300px; /* Limit the max width for larger screens */
-    display: block;
-    margin: 0 auto; /* Center the images */
-}
-
-/* Media Query for Tablets (max-width: 768px) */
-@media (max-width: 768px) {
-    .benefits img {
-        width: 80%; /* Make the images slightly smaller on tablets */
-        max-width: 200px; /* Limit the max width */
-        margin: 10px auto; /* Add some space around the images */
-    }
-}
-
-/* Media Query for Phones (max-width: 480px) */
-@media (max-width: 480px) {
-    .benefits img {
-        width: 70%; /* Make images smaller on phones */
-        max-width: 150px; /* Further limit the max width */
-        margin: 10px auto; /* Ensure some space around the images */
-    }
-}
-
-
-
