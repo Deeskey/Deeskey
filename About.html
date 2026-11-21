@@ -1,106 +1,405 @@
 <!doctype html>
-<html>
-<head> 
-<link rel="stylesheet" href="style.css">
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" type="image/png" href="images/11192.jpeg">
-<meta charset="utf-8">
-<title> About </title>
-    <meta name="viewport" content="width=device-width, initial-scale=.4.8">
-    <link rel="canonical" href="https://deeskey.com/About.html"/>
+    <meta charset="utf-8">
+    <title>About | Deeskey Auto Service</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #000000;
+            color: #ffffff;
+            font-family: system-ui, Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            line-height: 1.7;
+        }
+
+        /* 1. Flush Black Top Bar */
+        .top-bar {
+            background-color: #000000;
+            width: 100%;
+            margin: 0;
+            padding: 12px 30px;
+            border-bottom: 2px solid #00a2ff;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .top-bar .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0;
+            width: 100%;
+        }
+
+        .top-bar .navbar img.logo {
+            width: 160px;
+            height: auto;
+            display: block;
+        }
+
+        .top-bar .navbar ul {
+            list-style: none;
+            display: flex;
+            gap: 24px;
+            margin: 0;
+            padding: 0;
+        }
+
+        .top-bar .navbar ul li a {
+            color: #ffffff;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 14px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            transition: color 0.2s ease;
+        }
+
+        .top-bar .navbar ul li a:hover {
+            color: #33b5ff;
+        }
+
+        /* 2. Separated Background Photo Banner */
+        .banner {
+            width: 100%;
+            min-height: 300px;
+            height: auto !important;
+            padding: 60px 20px;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+
+        .banner::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.55);
+            z-index: 1;
+        }
+
+        .banner-text {
+            position: relative;
+            z-index: 2;
+        }
+
+        .banner-text h1 {
+            font-size: 3rem;
+            margin: 0 0 10px 0;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .banner-text p {
+            color: #d9d9d9;
+            font-size: 1.1rem;
+            margin: 0;
+        }
+
+        /* 3. Solid Black About Section (Text Left, Photos Right) */
+        .about-section {
+            background-color: #000000;
+            padding: 60px 20px;
+            border-top: 1px solid #1c1c1c;
+            border-bottom: 1px solid #1c1c1c;
+        }
+
+        .aboutme {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 50px;
+        }
+
+        .story-row {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            gap: 40px;
+            padding-bottom: 40px;
+            border-bottom: 1px solid #1c1c1c;
+        }
+
+        .story-row:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+
+        .story-text {
+            flex: 1.2;
+            text-align: left;
+        }
+
+        .story-text h2 {
+            color: #33b5ff;
+            font-size: 1.8rem;
+            line-height: 1.35;
+            margin-top: 0;
+            margin-bottom: 18px;
+        }
+
+        .story-text p {
+            color: #e6e6e6;
+            font-size: 1.05rem;
+            margin-top: 0;
+            margin-bottom: 16px;
+        }
+
+        .story-text a {
+            color: #33b5ff;
+            text-decoration: underline;
+        }
+
+        .story-photos {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+            align-items: flex-end;
+        }
+
+        .story-photos img {
+            width: 100%;
+            max-width: 460px;
+            height: auto;
+            border-radius: 8px;
+            border: 1px solid #2a2a2a;
+            display: block;
+        }
+
+        /* 4. Bottom Bar */
+        .bottombar {
+            background-color: #000000;
+            padding: 40px 20px;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 24px;
+        }
+
+        .hcp-button {
+            background-color: #00a2ff;
+            color: #ffffff;
+            border: none;
+            font-size: 18px;
+            font-weight: bold;
+            padding: 14px 36px;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background-color 0.2s ease, transform 0.2s ease;
+        }
+
+        .hcp-button:hover {
+            background-color: #33b5ff;
+            transform: translateY(-2px);
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+
+        .social-icons img {
+            width: 42px;
+            height: 42px;
+            transition: transform 0.2s ease;
+        }
+
+        .social-icons img:hover {
+            transform: scale(1.1);
+        }
+
+        /* Mobile Adjustments */
+        @media screen and (max-width: 768px) {
+            .top-bar {
+                padding: 12px 15px;
+            }
+
+            .top-bar .navbar {
+                flex-direction: column;
+                gap: 12px;
+            }
+
+            .top-bar .navbar ul {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 14px;
+            }
+
+            .banner {
+                min-height: 220px;
+                padding: 40px 15px;
+            }
+
+            .banner-text h1 {
+                font-size: 2rem;
+            }
+
+            .story-row {
+                flex-direction: column;
+                gap: 24px;
+            }
+
+            .story-photos {
+                align-items: center;
+                width: 100%;
+            }
+        }
+    </style>
 </head>
+
 <body>
-   <div class="banner">
-    <div class="navbar"> <img src="images/11194.jpeg" width="200" class="logo"> 
-       
-        
-        <ul> <li><a href="index.html">home</a></li>
-           <li><a href="About.html">About</a></li>
-           <li><a href="index.html#services">services</a></li>
-           <li><a href="index.html#appointment">appointment</a></li>
-          <li><a href="Gallery.html">gallery</a></li>
-            <li><a href="index.html#contact">contact</a></li>
-           <li><a href="blog.html">Blog</a></li>
-           
-        
-        </ul>
-       </div> 
 
+    <!-- Top Black Navigation Bar -->
+    <header class="top-bar">
+        <div class="navbar">
+            <img src="images/mobile%20mechanic.jpg" alt="Deeskey Auto Service Logo" class="logo">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="About.html">About</a></li>
+                <li><a href="index.html#services">Services</a></li>
+                <li><a href="index.html#appointment">Appointment</a></li>
+                <li><a href="Gallery.html">Gallery</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+                <li><a href="blog.html">Blog</a></li>
+            </ul>
+        </div>
+    </header>
 
+    <!-- Separated Background Photo Banner -->
+    <section class="banner">
+        <div class="banner-text">
+            <h1>About Deeskey</h1>
+            <p>Meet the mechanic behind Deeskey Auto Service</p>
+        </div>
+    </section>
 
- <div class="content">
-       
-       
-      <div class="aboutme"> <img src="images/12033.jpeg" alt- "" srcset-"" width="400"><h2 id="home">  </h2>
-          <h1> Whats up! My name is Deven, and I’m the proud owner and operator of Deeskey Auto Service, a local mobile mechanic business based in Provo.</h1>
-    <li><img src="images/das.png"  width="700"></li>
-          <p>As a lifelong car enthusiast, my passion for cars started when I was a kid, and it’s only grown from there. What started as a hobby has turned into a full-time business where I can combine my love for cars with the joy of delivering a top-quality service to my community.</p> 
-    
-    <p>As a one-man operation, I take pride in every detail of my work. I treat each vehicle as if it were my own, ensuring that every client receives the best care possible. My goal is simple: to make your experience as convenient and comfortable as possible, while providing a personal touch that larger companies just can’t match.</p>
-    
+    <!-- Main About Content on Solid Black Background -->
+    <main class="about-section">
+        <div class="aboutme">
 
-     <p> I grew up in Orem and have lived all around Utah County my whole life. My love for cars started at a young age, when I first began playing with Hot Wheels. This passion for cars evolved as I got older, moving from toy cars to video games. My personal favorite was Midnight Club 3: DUB Edition Remix. While many people gravitate toward Need for Speed, I preferred the Midnight Club series. The street racing vibe, coupled with 2000s-style hip-hop music, really resonated with me as a kid. The nostalgia from this game takes me right back to my childhood.</p>
-         <li><img src="images/midnightclub3.jpg"  width="700"></li>
-         <p>When I first played the game, I chose the 1964 Chevrolet Impala as my starter car. From that point on, and with a bit of influence from my dad, who was from Southern Los Angeles, I developed a love for classic muscle cars and lowriders. The flashy chrome, big rims, and bold paint were the signature style of the early 2000s, and I was heavily influenced by The Fast and the Furious movies, as well as shows like Pimp My Ride and West Coast Customs.</p>
-         <li><img src="images/64impala.webp"  width="700"></li>
-         <p>As my interest in cars grew, so did my fascination with customization. I was drawn to performance upgrades, wheels and tires, paint and graphics, and even air ride suspension and hydraulics. As a kid, I didn’t have a car to work on, but I found ways to express my creativity through my bikes and scooters. I would swap parts from different bikes to build the coolest one, often choosing the best "upgrades" I could find. At one point, I even made a lowrider scooter by putting skateboard wheels on it.</p>
-     
-          <p>Then, in junior high, I got <a href="myfirstcar.html">my first car</a>. That was just the beginning of my journey into the world of cars and customization!</p>
-          
-          <p>Throughout the years, I’ve gained my skills by doing the jobs I needed. My passion for cars started early, and I’ve never stopped learning and improving.</p>
- <li><img src="images/my%20first%20car.jpg"  width="700"></li>
-          <p>My first car was a 1980 Cadillac Coupe DeVille. I remember charging the battery and replacing the power steering pump—this was my very first time working on a car. After selling that Cadillac, I used the money to buy a 1987 Chevy Camaro. With the help of YouTube, I taught myself how to swap the engine and transmission. From there, I bought a 1994 Chevy Caprice, which I still own, and I continue to add customizations to it.</p>
- <li><img src="images/87camaro.jpg"  width="700"></li> <li><img src="images/laundre.jpg"  width="700"></li>
-          
-<p>In high school, I missed having a Cadillac, so I bought a 1983 Eldorado. I threw on flashy 20” rims, installed a Cherry Bomb muffler and dual exhaust pipes, but eventually, I regretted having a front-wheel-drive car. So, I got a 1979 Coupe DeVille. I added 20” 100-spoke Dayton rims, 2 12” Kenwood subs, and tinted the windows. I even welded chrome knuckle dusters to the hood as a custom ornament.</p> <li><img src="images/83eldo.jpg"  width="700"></li> <li><img src="images/79coupe.jpg" width="700"></li>
-
-          <p>At just 18 years old, I had the '83 Eldorado, '87 Camaro, '79 Coupe DeVille, and the '94 Caprice all at once! But at 19, with a baby on the way, I sold the Camaro, Eldorado, and Coupe DeVille to use the money for a place for me, my future wife, and our child.</p>
-
-<p>Years later, my amazing wife, knowing how much I loved Cadillacs, got me a 1973 Cadillac Coupe DeVille with a huge 500 cubic-inch motor. While it was an incredible gift, I didn’t have the skills at the time to fix the rust eating away at the body. I ended up selling it and used the money to buy a 1994 Buick Roadmaster. It had the same drivetrain as my Caprice, but with more Cadillac-like styling—best of both worlds. I added 2 12” Rockville subs, 2 Rockville amps, 20” rims, and lowered the car for a more aggressive stance.</p>
-           <li><img src="images/73coupe.jpg"  width="700"></li> <li><img src="images/roadmaster.jpg" width="700"></li>
-
-          <p>After a few years, my wife and I bought a 2016 Chevy Impala as our family car. In 2019, when we were buying our first home, I sold the Roadmaster to put the money toward our down payment.</p>
-           <li><img src="images/16impala.jpg" width="700"></li>
-
-<p>In 2022, I picked up a 2004 Chevy Silverado. I tinted the windows, installed a rear roll pan, added dual exhaust outlets, slapped on 24” KMC wheels, and lowered it for a more custom look. Throughout the years, I also picked up various little project cars, bought, fixed, and flipped them as side projects.</p>
-           <li><img src="images/silverado.jpg" width="700"></li>
-
-<p>Throughout this journey, I’ve worked on many of my friends' cars too—installing sound systems, radios, tinting windows,lowering kits, detailing, performing maintenance, performance mods, and tackling major mechanical repairs. I also attended MATC and the UVU automotive program for auto mechanics, furthering my knowledge and expertise.</p>
-
-<p>Now, with years of experience and continuous learning under my belt, I’m proud to launch Deeskey Auto Service. Running this business has been a long-time dream, and I’m excited to see where this journey takes me!</p>
-     
-     </div>
-     
-     
-     
-    <div class="bottombar">
-    <!-- Social Icons Section -->
-    <div class="social-icons">
-        <a class="socialicon" href="https://www.instagram.com/deeskey95/" target="_blank">
-            <img src="images/instagram%20icon.png" alt="Instagram" width="50">
-        </a>
-        <a class="socialicon" href="https://www.facebook.com/profile.php?id=100078760184001" target="_blank">
-            <img src="images/fb%20icon.png" alt="Facebook" width="50">
-        </a>
-    
-
-                    <script id="setmore_script" type="text/javascript" src="https://storage.googleapis.com/fullintegration-live/webComponentAppListing/Container/setmoreIframeLive.js"></script>
-                    <a id="Setmore_button_iframe" href="https://booking.setmore.com/scheduleappointment/158111b7-2d72-4b56-a40f-4d221399d1cb">
-                        <img border="none" src="https://assets.setmore.com/setmore/images/2.0/Settings/book-now-black.svg" alt="Book an appointment with Deeskey Customs using Setmore"/>
-                    </a>
+            <!-- Intro -->
+            <div class="story-row">
+                <div class="story-text">
+                    <h2>What's up! My name is Deven, and I’m the proud owner and operator of Deeskey Auto Service, a local mobile mechanic business based in Provo.</h2>
+                    <p>As a lifelong car enthusiast, my passion for cars started when I was a kid, and it’s only grown from there. What started as a hobby has turned into a full-time business where I can combine my love for cars with the joy of delivering a top-quality service to my community.</p>
+                    <p>As a one-man operation, I take pride in every detail of my work. I treat each vehicle as if it were my own, ensuring that every client receives the best care possible. My goal is simple: to make your experience as convenient and comfortable as possible, while providing a personal touch that larger companies just can’t match.</p>
                 </div>
-     
-</div>
+                <div class="story-photos">
+                    <img src="images/12033.jpeg" alt="Deven, owner of Deeskey Auto Service">
+                </div>
+            </div>
 
+            <!-- Growing Up & Midnight Club -->
+            <div class="story-row">
+                <div class="story-text">
+                    <p>I grew up in Orem and have lived all around Utah County my whole life. My love for cars started at a young age, when I first began playing with Hot Wheels. This passion for cars evolved as I got older, moving from toy cars to video games. My personal favorite was Midnight Club 3: DUB Edition Remix. While many people gravitate toward Need for Speed, I preferred the Midnight Club series. The street racing vibe, coupled with 2000s-style hip-hop music, really resonated with me as a kid. The nostalgia from this game takes me right back to my childhood.</p>
+                    <p>When I first played the game, I chose the 1964 Chevrolet Impala as my starter car. From that point on, and with a bit of influence from my dad, who was from Southern Los Angeles, I developed a love for classic muscle cars and lowriders. The flashy chrome, big rims, and bold paint were the signature style of the early 2000s, and I was heavily influenced by The Fast and the Furious movies, as well as shows like Pimp My Ride and West Coast Customs.</p>
+                    <p>As my interest in cars grew, so did my fascination with customization. I was drawn to performance upgrades, wheels and tires, paint and graphics, and even air ride suspension and hydraulics. As a kid, I didn’t have a car to work on, but I found ways to express my creativity through my bikes and scooters. I would swap parts from different bikes to build the coolest one, often choosing the best "upgrades" I could find. At one point, I even made a lowrider scooter by putting skateboard wheels on it.</p>
+                    <p>Then, in junior high, I got <a href="myfirstcar.html">my first car</a>. That was just the beginning of my journey into the world of cars and customization!</p>
+                </div>
+                <div class="story-photos">
+                    <img src="images/midnightclub3.jpg" alt="Midnight Club 3 DUB Edition Remix">
+                    <img src="images/64impala.webp" alt="1964 Chevrolet Impala">
+                </div>
+            </div>
 
+            <!-- First Cars: 80 DeVille, 87 Camaro, 94 Caprice -->
+            <div class="story-row">
+                <div class="story-text">
+                    <p>Throughout the years, I’ve gained my skills by doing the jobs I needed. My passion for cars started early, and I’ve never stopped learning and improving.</p>
+                    <p>My first car was a 1980 Cadillac Coupe DeVille. I remember charging the battery and replacing the power steering pump—this was my very first time working on a car. After selling that Cadillac, I used the money to buy a 1987 Chevy Camaro. With the help of YouTube, I taught myself how to swap the engine and transmission. From there, I bought a 1994 Chevy Caprice, which I still own, and I continue to add customizations to it.</p>
+                </div>
+                <div class="story-photos">
+                    <img src="images/firstcar4.jpeg" alt="1980 Cadillac Coupe DeVille">
+                    <img src="images/my%20first%20car.jpg" alt="First car project">
+                    <img src="images/87camaro.jpg" alt="1987 Chevy Camaro">
+                    <img src="images/laundre.jpg" alt="1994 Chevy Caprice">
+                </div>
+            </div>
 
+            <!-- High School Cadillacs -->
+            <div class="story-row">
+                <div class="story-text">
+                    <p>In high school, I missed having a Cadillac, so I bought a 1983 Eldorado. I threw on flashy 20” rims, installed a Cherry Bomb muffler and dual exhaust pipes, but eventually, I regretted having a front-wheel-drive car. So, I got a 1979 Coupe DeVille. I added 20” 100-spoke Dayton rims, 2 12” Kenwood subs, and tinted the windows. I even welded chrome knuckle dusters to the hood as a custom ornament.</p>
+                    <p>At just 18 years old, I had the '83 Eldorado, '87 Camaro, '79 Coupe DeVille, and the '94 Caprice all at once! But at 19, with a baby on the way, I sold the Camaro, Eldorado, and Coupe DeVille to use the money for a place for me, my future wife, and our child.</p>
+                </div>
+                <div class="story-photos">
+                    <img src="images/20140821_084430.jpeg" alt="Custom Cadillac">
+                    <img src="images/83eldo.jpg" alt="1983 Cadillac Eldorado">
+                    <img src="images/79coupe.jpg" alt="1979 Cadillac Coupe DeVille">
+                </div>
+            </div>
 
+            <!-- 73 Coupe DeVille & Roadmaster -->
+            <div class="story-row">
+                <div class="story-text">
+                    <p>Years later, my amazing wife, knowing how much I loved Cadillacs, got me a 1973 Cadillac Coupe DeVille with a huge 500 cubic-inch motor. While it was an incredible gift, I didn’t have the skills at the time to fix the rust eating away at the body. I ended up selling it and used the money to buy a 1994 Buick Roadmaster. It had the same drivetrain as my Caprice, but with more Cadillac-like styling—best of both worlds. I added 2 12” Rockville subs, 2 Rockville amps, 20” rims, and lowered the car for a more aggressive stance.</p>
+                </div>
+                <div class="story-photos">
+                    <img src="images/73coupe.jpg" alt="1973 Cadillac Coupe DeVille">
+                    <img src="images/roadmaster.jpg" alt="1994 Buick Roadmaster">
+                </div>
+            </div>
 
+            <!-- 2016 Impala & 2004 Silverado -->
+            <div class="story-row">
+                <div class="story-text">
+                    <p>After a few years, my wife and I bought a 2016 Chevy Impala as our family car. In 2019, when we were buying our first home, I sold the Roadmaster to put the money toward our down payment.</p>
+                    <p>In 2022, I picked up a 2004 Chevy Silverado. I tinted the windows, installed a rear roll pan, added dual exhaust outlets, slapped on 24” KMC wheels, and lowered it for a more custom look. Throughout the years, I also picked up various little project cars, bought, fixed, and flipped them as side projects.</p>
+                    <p>Throughout this journey, I've worked on many of my friends' cars too, installing sound systems, radios, window tint, lowering kits, performing detailing, maintenance, performance modifications, and major mechanical repairs. I also attended MATC and the UVU automotive program for auto mechanics, furthering my knowledge and expertise.</p>
+                </div>
+                <div class="story-photos">
+                    <img src="images/16impala.jpg" alt="2016 Chevy Impala">
+                    <img src="images/silverado.jpg" alt="2004 Chevy Silverado">
+                </div>
+            </div>
 
-    </div>
+        </div>
+    </main>
+
+    <!-- Bottom Bar -->
+    <footer class="bottombar">
+        <script async src="https://online-booking.housecallpro.com/script.js?token=7aab2044499a4e8d910e0e03a011c66c&orgName=Deeskey-Auto-Service"></script>
+        <button
+            data-token="7aab2044499a4e8d910e0e03a011c66c"
+            data-orgname="Deeskey-Auto-Service"
+            class="hcp-button"
+            onclick="HCPWidget.openModal()">
+            Book Now
+        </button>
+
+        <div class="social-icons">
+            <a class="socialicon" href="https://www.instagram.com/deeskey95/" target="_blank">
+                <img src="images/instagram%20icon.png" alt="Instagram">
+            </a>
+            <a class="socialicon" href="https://www.facebook.com/profile.php?id=100078760184001" target="_blank">
+                <img src="images/fb%20icon.png" alt="Facebook">
+            </a>
+        </div>
+    </footer>
 
 </body>
-
-
-
-
 </html>
