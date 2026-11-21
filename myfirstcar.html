@@ -1,184 +1,344 @@
 <!doctype html>
-<html>
+<html lang="en">
 
-<head> 
-<link rel="stylesheet" href="blog.css">
+<head>
+    <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" type="image/png" href="images/11192.jpeg">
-<meta charset="utf-8">
-     <link rel="canonical" href="https://deeskey.com/myfirstcar.html"/>
-<title> First-car </title>
-    
-</head>
-<body>
-   <div class="banner">
-    <div class="navbar"> <img src="images/11194.jpeg" width="200" class="logo"> 
-      
-              
-        <ul> <li><a href="index.html">home</a></li>
-           <li><a href="About.html">About</a></li>
-           <li><a href="index.html#services">services</a></li>
-           <li><a href="index.html#appointment">appointment</a></li>
-          <li><a href="Gallery.html">gallery</a></li>
-            <li><a href="index.html#contact">contact</a></li>
-           <li><a href="blog.html">Blog</a></li>
-           
-        
-        </ul>
-       </div> 
-       <style type= "text/css">
-           
-            .banner h2{
-               
-               font-size: 70px;
-        margin: 50px;
-        color:dodgerblue;
-                text-align: center; }
-           
-      .myfirstcar {
-               
-             position: relative;              
-            float: right;
-               width: 35%;                                   
-                height: 2000px;
-          
-           }
-           
-           
-           .pos_cen
-               {
-                   position: absolute;
-                   top: 300px;
-                   width: 60%;
-                   margin: 50px;
-                   background-color: lightgrey;
-               
-                       
-                   
-               }
-           
-           .pos_cen h3 {
-               
-               margin: 50px;
-           }
-           
-           .interiorhowto h2 {
-               
-               
-        font-size: 70px;
-        margin: 50px;
-        color:dodgerblue;
-        text-align: center;
-               
-           }
-       
-           .bottombar
-               {
-                   
-                    padding: 0;
-                   margin: 0;
-                   display: flex;                  
-                   justify-content: center;
-                   position: relative;
-                   top: 400px;                                    
-                                   
-               }
-               
-               .bottombar li {
-                   
-                   
-                   margin: 0 30px;
-               }
-           
-          .img_deg 
-               
-               {
-                   position: absolute;
-                    margin: 30px;
-                   top: 0%;
-                  
-               }
-           
-           .img_deg2 
-               
-               {
-                    position: absolute;
-                  
-                   margin: 20px;
-                   top: 20%;
-                   
-               }
-           
-           .img_deg3 
-               
-               {
-                   position: absolute;
-                  
-                   margin: 20px;
-                   top: 40%;
-                  
-               }
-           
-           .img_deg4 
-               
-               {
-                   position: absolute;                   
-                   margin: 20px;
-                   top: 60%;
-                  
-               }
-       
-       
-       </style>
-       
-       <h2>My First Car</h2>
-       
-        <div class="myfirstcar"> <h2 id="myfirstcar.html"> </h2>
+    <meta charset="utf-8">
+    <link rel="canonical" href="https://deeskey.com/myfirstcar.html"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How I Got My First Car | Deeskey Auto Service</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
 
-           <img class="img_deg" src="images/firstcar2.jpg" alt- "" srcset-"" width="500">
-            <img class="img_deg2" src="images/firstcar3.jpg" alt- "" srcset-"" width="500">
-            <img class="img_deg3" src="images/firstcar4.jpg" alt- "" srcset-"" width="500">
-            <img class="img_deg4" src="images/firstcar5.jpg" alt- "" srcset-"" width="500"> </div>
-            
-            <div class="pos_cen"> 
+        body {
+            background-color: #000000;
+            color: #ffffff;
+            font-family: system-ui, Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            line-height: 1.7;
+        }
 
-                
-                <h1>How I Got My First Car at 14</h1>
+        /* 1. Flush Black Top Bar */
+        .top-bar {
+            background-color: #000000;
+            width: 100%;
+            margin: 0;
+            padding: 12px 30px;
+            border-bottom: 2px solid #00a2ff;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
 
-<h3>When I was 14 years old and in 9th grade, something unexpected happened that set me on a path of car obsession. One day after school, I was out walking with some friends around the neighborhood when we came across an old handicap motorized wheelchair sitting next to the sidewalk with a cardboard sign that said “FREE.” Without hesitation, I pushed it home.</h3>
+        .top-bar .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0;
+            width: 100%;
+        }
 
-<h3>I wasn’t sure if it would work, but I decided to try and fix it. I spliced a new cord from an old vacuum, hooked it up, and waited. To my surprise, it charged, and it worked! I was stoked. Once it was running, I started riding it around the neighborhood, even taking it to school a few times. I painted the wheels black and loosened the seat so it would lean back—giving it that “hydraulics” effect when I accelerated. It was my little piece of customization, and I was loving it.</h3>
+        .top-bar .navbar img.logo {
+            width: 160px;
+            height: auto;
+            display: block;
+        }
 
-<h3>As time went on, I took it even further. I removed the bottom fairing and painted it black with red flames. It was a joke, something fun and unique, but eventually, I grew bored of it. I figured I could make some money by selling it, so I listed it in the classifieds section of KSL for $200 (though I’d have been happy with $100).</h3>
+        .top-bar .navbar ul {
+            list-style: none;
+            display: flex;
+            gap: 24px;
+            margin: 0;
+            padding: 0;
+        }
 
-<h3>I got a few calls offering ridiculously low prices—$50 or the classic, “When can I come look at it?” But I wasn’t ready to let it go for so little. Then, one day, I received a call that changed everything. An elderly man told me he couldn’t afford a wheelchair due to insurance issues and was in need of one. He then made an offer that made my jaw drop. He said, “I have an old car. It’ll need some work to get back on the road, but it runs and drives. Would you be willing to trade?”</h3>
+        .top-bar .navbar ul li a {
+            color: #ffffff;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 14px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            transition: color 0.2s ease;
+        }
 
-<h3>I couldn’t believe it. He was offering me a car in exchange for the wheelchair, and it only got better when he told me it was a 1980 Cadillac Coupe DeVille. I didn’t even know what that car looked like, so I had to Google it. When I saw the pictures, I couldn’t contain my excitement—this car had so much potential!</h3>
+        .top-bar .navbar ul li a:hover {
+            color: #33b5ff;
+        }
 
-<h3>Of course, I knew my grandparents wouldn’t let me get a car without their permission, so I had to ask them for approval. After a bit of begging, they agreed, and the car was on its way. The Cadillac arrived on a tow truck, and the man, along with his family, unloaded it and handed me the keys and title. I was thrilled!</h3>
+        /* 2. Separated Background Photo Banner */
+        .banner {
+            width: 100%;
+            min-height: 300px;
+            height: auto !important;
+            padding: 60px 20px;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
 
-<h3>I didn’t keep the car for long, though. I managed to get the battery charged, and I even drove it around the block once. But after a few months, my grandparents convinced me to sell it since it needed more work than I could handle at the time. Looking back, I now know I could’ve done the work myself, and I regret selling it.</h3>
+        .banner::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.55);
+            z-index: 1;
+        }
 
-<h3>That 1980 Cadillac Coupe DeVille was the start of my car knowledge journey. Since then, I’ve owned four other Cadillacs, along with various other similar vehicles. One day, I hope to buy another 1980 Cadillac Coupe DeVille and restore it to my liking!</h3>
-          
-       
-       <div class="bottombar">  <li><a class="socialicon" href="https://www.instagram.com/deeskey95/" target="blank"><img src="images/instagram%20icon.png"alt- "" srcset-"" width="50"> </a></li>
-    <li><a class="socialicon" href="https://www.facebook.com/profile.php?id=100078760184001" target="blank"><img src="images/fb%20icon.png"alt- "" srcset-"" width="50"> </a></li>
-    <li><script id="setmore_script" type="text/javascript" src="https://storage.googleapis.com/fullintegration-live/webComponentAppListing/Container/setmoreIframeLive.js"></script><a style="float:none; " id="Setmore_button_iframe" href="https://booking.setmore.com/scheduleappointment/158111b7-2d72-4b56-a40f-4d221399d1cb"><img border="none" src="https://assets.setmore.com/setmore/images/2.0/Settings/book-now-black.svg" alt="Book an appointment with Deeskey Customs using Setmore"/></a></li> </div> </div>  </div>
+        .banner-text {
+            position: relative;
+            z-index: 2;
+        }
 
+        .banner-text h1 {
+            font-size: 3rem;
+            margin: 0 0 10px 0;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
 
+        .banner-text p {
+            color: #d9d9d9;
+            font-size: 1.1rem;
+            margin: 0;
+        }
 
+        /* 3. Article Section (Text Left, Photos Right) */
+        .article-section {
+            background-color: #000000;
+            padding: 60px 20px;
+            border-top: 1px solid #1c1c1c;
+            border-bottom: 1px solid #1c1c1c;
+        }
 
+        .article-container {
+            max-width: 1120px;
+            margin: 0 auto;
+        }
 
+        .back-link {
+            display: inline-block;
+            color: #33b5ff;
+            text-decoration: none;
+            font-weight: 600;
+            margin-bottom: 28px;
+            transition: color 0.2s ease;
+        }
 
+        .back-link:hover {
+            color: #ffffff;
+        }
 
+        .article-layout {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            gap: 45px;
+        }
 
+        .article-text {
+            flex: 1.3;
+            background-color: #0d0d0d;
+            border: 1px solid #1c1c1c;
+            border-radius: 10px;
+            padding: 36px;
+        }
 
+        .article-text h2 {
+            color: #33b5ff;
+            font-size: 2rem;
+            margin: 0 0 24px 0;
+            line-height: 1.3;
+        }
 
-<div>
-<style>
-    body{background-color: black}
+        .article-text p {
+            color: #e6e6e6;
+            font-size: 1.06rem;
+            margin: 0 0 18px 0;
+        }
+
+        .article-text p:last-child {
+            margin-bottom: 0;
+        }
+
+        .article-photos {
+            flex: 0.9;
+            display: flex;
+            flex-direction: column;
+            gap: 22px;
+        }
+
+        .article-photos img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            border: 1px solid #2a2a2a;
+            display: block;
+        }
+
+        /* 4. Bottom Bar */
+        .bottombar {
+            background-color: #000000;
+            padding: 40px 20px;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 24px;
+        }
+
+        .hcp-button {
+            background-color: #00a2ff;
+            color: #ffffff;
+            border: none;
+            font-size: 18px;
+            font-weight: bold;
+            padding: 14px 36px;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background-color 0.2s ease, transform 0.2s ease;
+        }
+
+        .hcp-button:hover {
+            background-color: #33b5ff;
+            transform: translateY(-2px);
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+
+        .social-icons img {
+            width: 42px;
+            height: 42px;
+            transition: transform 0.2s ease;
+        }
+
+        .social-icons img:hover {
+            transform: scale(1.1);
+        }
+
+        /* Mobile Adjustments */
+        @media screen and (max-width: 768px) {
+            .top-bar {
+                padding: 12px 15px;
+            }
+
+            .top-bar .navbar {
+                flex-direction: column;
+                gap: 12px;
+            }
+
+            .top-bar .navbar ul {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 14px;
+            }
+
+            .banner {
+                min-height: 220px;
+                padding: 40px 15px;
+            }
+
+            .banner-text h1 {
+                font-size: 2rem;
+            }
+
+            .article-layout {
+                flex-direction: column;
+                gap: 28px;
+            }
+
+            .article-text {
+                padding: 24px;
+            }
+
+            .article-text h2 {
+                font-size: 1.6rem;
+            }
+        }
     </style>
-    
+</head>
+
+<body>
+
+    <!-- Top Black Navigation Bar -->
+    <header class="top-bar">
+        <div class="navbar">
+            <a href="index.html">
+                <img src="images/mobile%20mechanic.jpg" alt="Deeskey Auto Service Logo" class="logo">
+            </a>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="About.html">About</a></li>
+                <li><a href="index.html#services">Services</a></li>
+                <li><a href="index.html#appointment">Appointment</a></li>
+                <li><a href="Gallery.html">Gallery</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+                <li><a href="blog.html">Blog</a></li>
+            </ul>
         </div>
-    </body>
-</html>
+    </header>
+
+    <!-- Separated Background Photo Banner -->
+    <section class="banner">
+        <div class="banner-text">
+            <h1>My First Car</h1>
+            <p>The true story of how I traded a free wheelchair for a 1980 Cadillac Coupe DeVille</p>
+        </div>
+    </section>
+
+    <!-- Main Blog Content -->
+    <main class="article-section">
+        <div class="article-container">
+            <a href="blog.html" class="back-link">&larr; Back to Blog</a>
+
+            <div class="article-layout">
+                <article class="article-text">
+                    <h2>How I Got My First Car at 14</h2>
+
+                    <p>When I was 14 years old and in 9th grade, something unexpected happened that set me on a path of car obsession. One day after school, I was out walking with some friends around the neighborhood when we came across an old handicap motorized wheelchair sitting next to the sidewalk with a cardboard sign that said “FREE.” Without hesitation, I pushed it home.</p>
+
+                    <p>I wasn’t sure if it would work, but I decided to try and fix it. I spliced a new cord from an old vacuum, hooked it up, and waited. To my surprise, it charged, and it worked! I was stoked. Once it was running, I started riding it around the neighborhood, even taking it to school a few times. I painted the wheels black and loosened the seat so it would lean back—giving it that “hydraulics” effect when I accelerated. It was my little piece of customization, and I was loving it.</p>
+
+                    <p>As time went on, I took it even further. I removed the bottom fairing and painted it black with red flames. It was a joke, something fun and unique, but eventually, I grew bored of it. I figured I could make some money by selling it, so I listed it in the classifieds section of KSL for $200 (though I’d have been happy with $100).</p>
+
+                    <p>I got a few calls offering ridiculously low prices—$50 or the classic, “When can I come look at it?” But I wasn’t ready to let it go for so little. Then, one day, I received a call that changed everything. An elderly man told me he couldn’t afford a wheelchair due to insurance issues and was in need of one. He then made an offer that made my jaw drop. He said, “I have an old car. It’ll need some work to get back on the road, but it runs and drives. Would you be willing to trade?”</p>
+
+                    <p>I couldn’t believe it. He was offering me a car in exchange for the wheelchair, and it only got better when he told me it was a 1980 Cadillac Coupe DeVille. I didn’t even know what that car looked like, so I had to Google it. When I saw the pictures, I couldn’t contain my excitement—this car had so much potential!</p>
+
+                    <p>Of course, I knew my grandparents wouldn’t let me get a car without their permission, so I had to ask them for approval. After a bit of begging, they agreed, and the car was on its way. The Cadillac arrived on a tow truck, and the man, along with his family, unloaded it and handed me the keys and title. I was thrilled!</p>
+
+                    <p>I didn’t keep the car for long, though. I managed to get the battery charged, and I even drove it around the block once. But after a few months, my grandparents convinced me to sell it since it needed more work than I could handle at the time. Looking back, I now know I could’ve done the work myself, and I regret selling it.</p>
+
+                    <p>That 1980 Cadillac Coupe DeVille was the start of my car knowledge journey. Since then, I’ve owned four other Cadillacs, along with various other similar vehicles. One day, I hope to buy another 1980 Cadillac Coupe DeVille and restore it to my liking!</p>
+                </article>
+
+                <aside class="article-photos">
+                    <img src="images/firstcar2.jpg" alt="1980 Cadillac Coupe DeVille photo 1">
+                    <img src="images/firstcar3.jpg" alt="1980 Cadillac Coupe DeVille photo 2">
+                    <img src="images/firstcar4.jpg" alt="1980 Cadillac Coupe DeVille photo 3">
+                    <img src="images/firstcar5.jpg" alt="1980 Cadillac Coupe DeVille photo 4">
+                </aside>
+            </div>
+        </div>
+    </main>
+
+    <!-- Bottom Bar -->
+    <footer class="bottombar">
+        <script async src="
