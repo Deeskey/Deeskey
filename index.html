@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html lang="en">
 
 <head>
     <link rel="stylesheet" href="style.css">
@@ -7,22 +7,413 @@
     <meta charset="utf-8">
     <link rel="canonical" href="https://deeskey.com/index.html"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Deeskey</title>
+    <title>Deeskey Auto Service | Mobile Mechanic</title>
 
     <!-- JavaScript for redirect -->
     <script type="text/javascript">
-        // Check if the user is on the root page (https://deeskey.com/)
         if (window.location.pathname === '/') {
-            // If they are, redirect them to the index.html page
             window.location.replace('/index.html');
         }
     </script>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: #000000;
+            color: #ffffff;
+            font-family: system-ui, Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+
+        /* Prevent sticky header from covering anchor headings */
+        section[id],
+        h2[id] {
+            scroll-margin-top: 90px;
+        }
+
+        /* 1. Flush Black Top Bar */
+        .top-bar {
+            background-color: #000000;
+            width: 100%;
+            margin: 0;
+            padding: 12px 30px;
+            border-bottom: 2px solid #00a2ff;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .top-bar .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0;
+            width: 100%;
+        }
+
+        .top-bar .navbar img.logo {
+            width: 160px;
+            height: auto;
+            display: block;
+        }
+
+        .top-bar .navbar ul {
+            list-style: none;
+            display: flex;
+            gap: 24px;
+            margin: 0;
+            padding: 0;
+        }
+
+        .top-bar .navbar ul li a {
+            color: #ffffff;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 14px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            transition: color 0.2s ease;
+        }
+
+        .top-bar .navbar ul li a:hover {
+            color: #33b5ff;
+        }
+
+        /* 2. Separated Background Photo Banner */
+        .banner {
+            width: 100%;
+            min-height: 360px;
+            height: auto !important;
+            padding: 70px 20px;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+
+        .banner::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.6);
+            z-index: 1;
+        }
+
+        .banner-text {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+        }
+
+        .banner-text h1 {
+            font-size: 3rem;
+            margin: 0 0 12px 0;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .banner-text p {
+            color: #e0e0e0;
+            font-size: 1.15rem;
+            margin: 0 0 26px 0;
+        }
+
+        /* Shared Button Style */
+        .hcp-button {
+            background-color: #00a2ff;
+            color: #ffffff;
+            border: none;
+            font-size: 18px;
+            font-weight: bold;
+            padding: 14px 36px;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background-color 0.2s ease, transform 0.2s ease;
+        }
+
+        .hcp-button:hover {
+            background-color: #33b5ff;
+            transform: translateY(-2px);
+        }
+
+        /* 3. Responsive Video Section */
+        .video-section {
+            background-color: #000000;
+            padding: 60px 20px;
+            border-top: 1px solid #1c1c1c;
+        }
+
+        .iframe-container {
+            position: relative;
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto;
+            aspect-ratio: 16 / 9;
+            border-radius: 10px;
+            overflow: hidden;
+            border: 1px solid #2a2a2a;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+        }
+
+        .iframe-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        /* 4. Services Section */
+        .services {
+            background-color: #0d0d0d;
+            padding: 70px 20px;
+            text-align: center;
+            border-top: 1px solid #1c1c1c;
+            border-bottom: 1px solid #1c1c1c;
+        }
+
+        .services h2,
+        .appointment h2,
+        .contact h2 {
+            font-size: 2.3rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin: 0 0 18px 0;
+            color: #ffffff;
+        }
+
+        .services-intro {
+            max-width: 780px;
+            margin: 0 auto 45px auto;
+            color: #d9d9d9;
+            font-size: 1.08rem;
+        }
+
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+            gap: 26px;
+            max-width: 1120px;
+            margin: 0 auto;
+        }
+
+        .service-card {
+            background-color: #161616;
+            border: 1px solid #2a2a2a;
+            border-radius: 10px;
+            overflow: hidden;
+            text-decoration: none;
+            color: #ffffff;
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.25s ease, border-color 0.25s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            border-color: #00a2ff;
+        }
+
+        .service-card img {
+            width: 100%;
+            height: 210px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .service-card h3 {
+            color: #33b5ff;
+            font-size: 1.25rem;
+            margin: 18px 18px 8px 18px;
+        }
+
+        .service-card p {
+            color: #cccccc;
+            font-size: 0.98rem;
+            margin: 0 18px 22px 18px;
+        }
+
+        .services-footer {
+            max-width: 700px;
+            margin: 40px auto 0 auto;
+            color: #cccccc;
+            font-size: 1.05rem;
+        }
+
+        /* 5. Schedule Appointment Section */
+        .appointment {
+            background-color: #000000;
+            padding: 70px 20px;
+            text-align: center;
+        }
+
+        .appointment p {
+            color: #d9d9d9;
+            margin: 0 auto 28px auto;
+            max-width: 600px;
+            font-size: 1.05rem;
+        }
+
+        /* 6. Contact Section */
+        .contact {
+            background-color: #0d0d0d;
+            padding: 70px 20px;
+            text-align: center;
+            border-top: 1px solid #1c1c1c;
+            border-bottom: 1px solid #1c1c1c;
+        }
+
+        .contact-info {
+            margin-bottom: 35px;
+        }
+
+        .contact-info p {
+            margin: 6px 0;
+            color: #d9d9d9;
+            font-size: 1.08rem;
+        }
+
+        .contact-links {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 24px;
+            margin-top: 18px;
+        }
+
+        .contact-links a {
+            color: #33b5ff;
+            text-decoration: none;
+            font-size: 1.15rem;
+            font-weight: 600;
+            padding: 10px 20px;
+            background-color: #161616;
+            border: 1px solid #2a2a2a;
+            border-radius: 6px;
+            transition: border-color 0.2s ease, color 0.2s ease;
+        }
+
+        .contact-links a:hover {
+            border-color: #00a2ff;
+            color: #ffffff;
+        }
+
+        .contact-container {
+            max-width: 720px;
+            margin: 0 auto;
+            background-color: #161616;
+            border: 1px solid #2a2a2a;
+            border-radius: 10px;
+            padding: 30px 24px;
+        }
+
+        .contact-left-title h3 {
+            color: #33b5ff;
+            font-size: 1.6rem;
+            margin: 0 0 6px 0;
+        }
+
+        .contact-left-title p {
+            color: #cccccc;
+            margin: 0 0 18px 0;
+        }
+
+        .contact-left-title hr {
+            border: none;
+            height: 2px;
+            width: 80px;
+            background-color: #00a2ff;
+            margin: 0 auto 24px auto;
+        }
+
+        /* 7. Bottom Bar */
+        .bottombar {
+            background-color: #000000;
+            padding: 40px 20px;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+
+        .social-icons img {
+            width: 42px;
+            height: 42px;
+            transition: transform 0.2s ease;
+        }
+
+        .social-icons img:hover {
+            transform: scale(1.1);
+        }
+
+        /* Mobile Adjustments */
+        @media screen and (max-width: 768px) {
+            .top-bar {
+                padding: 12px 15px;
+            }
+
+            .top-bar .navbar {
+                flex-direction: column;
+                gap: 12px;
+            }
+
+            .top-bar .navbar ul {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 14px;
+            }
+
+            .banner {
+                min-height: 260px;
+                padding: 50px 15px;
+            }
+
+            .banner-text h1 {
+                font-size: 2rem;
+            }
+
+            .services h2,
+            .appointment h2,
+            .contact h2 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
 </head>
 
 <body>
-    <div class="banner">
+
+    <!-- Top Black Navigation Bar -->
+    <header class="top-bar">
         <div class="navbar">
-            <img src="images/mobile%20mechanic.jpg" width="200" class="logo">
+            <a href="index.html">
+                <img src="images/mobile%20mechanic.jpg" alt="Deeskey Auto Service Logo" class="logo">
+            </a>
             <ul>
                 <li><a href="About.html">About</a></li>
                 <li><a href="#services">Services</a></li>
@@ -32,180 +423,162 @@
                 <li><a href="blog.html">Blog</a></li>
             </ul>
         </div>
-    </div>
-    
-   
+    </header>
 
-    <div class="content">
-       
-         <div class="iframe-container">
-    <iframe  width="560"
-  height="315"
-  src="https://www.youtube.com/embed/1fdP4SZLqcQ?autoplay=1&mute=1"
-  frameborder="0"
-  allow="autoplay; encrypted-media"
-  allowfullscreen></iframe>
-</div>
+    <!-- Separated Background Photo Banner -->
+    <section class="banner">
+        <div class="banner-text">
+            <h1>Deeskey Auto Service</h1>
+            <p>Trusted mobile mechanic providing hassle-free automotive maintenance and repairs right at your location across Utah County.</p>
+            <button
+                data-token="21091dc646ac4166a3d72752976aa281"
+                data-orgname="Deeskey-Auto-Service"
+                class="hcp-button"
+                onclick="HCPWidget.openModal()">
+                Book Online
+            </button>
+        </div>
+    </section>
 
-
-
-        <div class="services">
-    <h2 id="services">Our Services</h2>
-
-    <p class="services-intro">
-        Deeskey Auto Service is a trusted mobile mechanic serving Spanish Fork,
-        Springville, Provo, Orem, Payson, Salem, Mapleton, and surrounding Utah
-        County areas. We provide convenient, hassle-free automotive maintenance
-        and repairs right at your location. No need to visit a repair shop!
-    </p>
-
-    <div class="service-grid">
-
-       
-
-        
-
-        <a href="mechanical.html" class="service-card">
-            <img src="images/brakes.PNG" alt="Brake pad and rotor replacement">
-            <h3>Brake Services</h3>
-            <p>Brake pads, rotors, inspections, and brake repairs.</p>
-        </a>
-
-        <a href="mechanical.html" class="service-card">
-            <img src="images/oilpan.jpg" alt="Automotive mechanical repair">
-            <h3>Mechanical Repairs</h3>
-            <p>Engine repairs, cooling systems, leaks, and more.</p>
-        </a>
-
-        <a href="mechanical.html" class="service-card">
-            <img src="images/electrical%20panel.jpg" alt="Automotive electrical diagnostics">
-            <h3>Electrical & Charging</h3>
-            <p>Batteries, alternators, starters, and electrical issues.</p>
-        </a>
-
-        <a href="mechanical.html" class="service-card">
-            <img src="images/connector.jpg" alt="Mechanic performing vehicle diagnostics">
-            <h3>Diagnostics & Troubleshooting</h3>
-            <p>Check engine lights, no-start issues, and vehicle diagnostics.</p>
-        </a>
-
-        <a href="Oilservice.html" class="service-card">
-            <img src="images/oil change.PNG" alt="Mobile oil change service">
-            <h3>Mobile Oil Changes</h3>
-            <p>Convenient oil and filter changes right at your location.</p>
-        </a>
-
-        <a href="maintenance.html" class="service-card">
-            <img src="images/sparkplugs.PNG" alt="Automotive maintenance">
-            <h3>Mobile Maintenance</h3>
-            <p>Routine maintenance, filters, spark plugs, belts, and more.</p>
-        </a>
-        
-    </div>
-
-    <p class="services-footer">
-        Don't see what you're looking for? Contact us!
-        We offer a wide range of mobile automotive repair services.
-    </p>
-</div>
-
-        
-<div class="appointment">
-    <h2 id="appointment">Schedule Appointment</h2>
-
-    <!-- Start of Housecall Pro Online Booking Button -->
-    <button
-        data-token="21091dc646ac4166a3d72752976aa281"
-        data-orgname="Deeskey-Auto-Service"
-        class="hcp-button"
-        onclick="HCPWidget.openModal()">
-        Book Online
-    </button>
-
-    <script async src="https://online-booking.housecallpro.com/script.js?token=21091dc646ac4166a3d72752976aa281&orgName=Deeskey-Auto-Service">
-    </script>
-    <!-- End of Housecall Pro Online Booking Button -->
-
-</div>
-
-
-       
-<div class="contact">
-    <h2 id="contact">Contact Us</h2>
-
-    <p>Have questions or need automotive repairs?</p>
-    <p>Get in touch with Deeskey Auto Service!</p>
-
-    <p>
-        <a href="mailto:deeskeymt@hotmail.com">
-            deeskeymt@hotmail.com
-        </a>
-    </p>
-
-    <p>
-        <a href="tel:3853312946">
-            (385) 331-2946
-        </a>
-    </p>
-
-    <div class="contact-container">
-
-        <div class="contact-left">
-
-            <div class="contact-left-title">
-                <h3>Request Service</h3>
-                <p>Tell us what your vehicle needs!</p>
-                <hr>
-            </div>
-
-            <!-- Start of Housecall Pro Lead Capture -->
-
-            <script async src="https://online-booking.housecallpro.com/script.js?token=7aab2044499a4e8d910e0e03a011c66c&orgName=Deeskey-Auto-Service">
-            </script>
-
+    <!-- Video Section -->
+    <section class="video-section">
+        <div class="iframe-container">
             <iframe
-                id="hcp-lead-iframe"
-                title="Deeskey Auto Service Contact Form"
-                src="https://book.housecallpro.com/lead-form/Deeskey-Auto-Service/7aab2044499a4e8d910e0e03a011c66c"
-                style="border: none; width: 100%; min-height: 650px;">
+                src="https://www.youtube.com/embed/1fdP4SZLqcQ?autoplay=1&mute=1"
+                title="Deeskey Auto Service"
+                allow="autoplay; encrypted-media"
+                allowfullscreen>
             </iframe>
+        </div>
+    </section>
 
-            <!-- End of Housecall Pro Lead Capture -->
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <h2>Our Services</h2>
+
+        <p class="services-intro">
+            Deeskey Auto Service is a trusted mobile mechanic serving Spanish Fork,
+            Springville, Provo, Orem, Payson, Salem, Mapleton, and surrounding Utah
+            County areas. We provide convenient, hassle-free automotive maintenance
+            and repairs right at your location. No need to visit a repair shop!
+        </p>
+
+        <div class="service-grid">
+
+            <a href="Oilservice.html" class="service-card">
+                <img src="images/oil change.png" alt="Mobile oil change service">
+                <h3>Mobile Oil Changes</h3>
+                <p>Convenient oil and filter changes right at your location.</p>
+            </a>
+
+            <a href="maintenance.html" class="service-card">
+                <img src="images/sparkplugs.png" alt="Automotive maintenance">
+                <h3>Mobile Maintenance</h3>
+                <p>Routine maintenance, filters, spark plugs, belts, and more.</p>
+            </a>
+
+            <a href="mechanical.html" class="service-card">
+                <img src="images/brakes.png" alt="Brake pad and rotor replacement">
+                <h3>Brake Services</h3>
+                <p>Brake pads, rotors, inspections, and brake repairs.</p>
+            </a>
+
+            <a href="mechanical.html" class="service-card">
+                <img src="images/oilpan.jpg" alt="Automotive mechanical repair">
+                <h3>Mechanical Repairs</h3>
+                <p>Engine repairs, cooling systems, leaks, and more.</p>
+            </a>
+
+            <a href="mechanical.html" class="service-card">
+                <img src="images/electrical%20panel.jpg" alt="Automotive electrical diagnostics">
+                <h3>Electrical &amp; Charging</h3>
+                <p>Batteries, alternators, starters, and electrical issues.</p>
+            </a>
+
+            <a href="mechanical.html" class="service-card">
+                <img src="images/connector.jpg" alt="Mechanic performing vehicle diagnostics">
+                <h3>Diagnostics &amp; Troubleshooting</h3>
+                <p>Check engine lights, no-start issues, and vehicle diagnostics.</p>
+            </a>
 
         </div>
 
-    </div>
+        <p class="services-footer">
+            Don't see what you're looking for? Contact us!
+            We offer a wide range of mobile automotive repair services.
+        </p>
+    </section>
 
-    <div class="bottombar">
+    <!-- Schedule Appointment Section -->
+    <section class="appointment" id="appointment">
+        <h2>Schedule Appointment</h2>
+        <p>Skip the waiting room—book your mobile mechanic appointment online in minutes.</p>
 
+        <!-- Start of Housecall Pro Online Booking Button -->
+        <button
+            data-token="21091dc646ac4166a3d72752976aa281"
+            data-orgname="Deeskey-Auto-Service"
+            class="hcp-button"
+            onclick="HCPWidget.openModal()">
+            Book Online
+        </button>
+
+        <script async src="https://online-booking.housecallpro.com/script.js?token=21091dc646ac4166a3d72752976aa281&orgName=Deeskey-Auto-Service"></script>
+        <!-- End of Housecall Pro Online Booking Button -->
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <h2>Contact Us</h2>
+
+        <div class="contact-info">
+            <p>Have questions or need automotive repairs? Get in touch with Deeskey Auto Service!</p>
+            <div class="contact-links">
+                <a href="mailto:deeskeymt@hotmail.com">deeskeymt@hotmail.com</a>
+                <a href="tel:3853312946">(385) 331-2946</a>
+            </div>
+        </div>
+
+        <div class="contact-container">
+            <div class="contact-left">
+                <div class="contact-left-title">
+                    <h3>Request Service</h3>
+                    <p>Tell us what your vehicle needs!</p>
+                    <hr>
+                </div>
+
+                <!-- Start of Housecall Pro Lead Capture -->
+                <script async src="https://online-booking.housecallpro.com/script.js?token=7aab2044499a4e8d910e0e03a011c66c&orgName=Deeskey-Auto-Service"></script>
+
+                <iframe
+                    id="hcp-lead-iframe"
+                    title="Deeskey Auto Service Contact Form"
+                    src="https://book.housecallpro.com/lead-form/Deeskey-Auto-Service/7aab2044499a4e8d910e0e03a011c66c"
+                    style="border: none; width: 100%; min-height: 650px;">
+                </iframe>
+                <!-- End of Housecall Pro Lead Capture -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Bottom Bar -->
+    <footer class="bottombar">
         <div class="social-icons">
-
             <a class="socialicon"
                href="https://www.instagram.com/deeskey95/"
                target="_blank"
                rel="noopener noreferrer">
-                <img src="images/instagram%20icon.png"
-                     alt="Instagram"
-                     width="50">
+                <img src="images/instagram%20icon.png" alt="Instagram">
             </a>
 
             <a class="socialicon"
                href="https://www.facebook.com/profile.php?id=100078760184001"
                target="_blank"
                rel="noopener noreferrer">
-                <img src="images/fb%20icon.png"
-                     alt="Facebook"
-                     width="50">
+                <img src="images/fb%20icon.png" alt="Facebook">
             </a>
-
         </div>
-
-    </div>
-
-        </div>
-    </div>
+    </footer>
 
 </body>
 </html>
-
-
