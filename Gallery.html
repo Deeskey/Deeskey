@@ -1,112 +1,262 @@
 <!doctype html>
-<html>
+<html lang="en">
 
 <head>
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" type="image/png" href="images/11192.jpeg">
     <meta charset="utf-8">
-    <title>Gallery</title>
+    <title>Gallery | Deeskey Auto Service</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="canonical" href="https://deeskey.com/Gallery.html"/>
     <style>
+        * {
+            box-sizing: border-box;
+        }
+
         body {
-            background-color: black;
-            color: white;
-            font-family: Arial, sans-serif;
+            background-color: #000000;
+            color: #ffffff;
+            font-family: system-ui, Arial, sans-serif;
             margin: 0;
             padding: 0;
             overflow-x: hidden;
-            
-        }               
-
-        .banner {
-            text-align: center;
-            padding: 20px;
         }
 
-        .navbar img {
-            width: 200px;
+        /* 1. Black Top Bar flush to the very top of the screen */
+        .top-bar {
+            background-color: #000000;
+            width: 100%;
+            margin: 0;
+            padding: 12px 30px;
+            border-bottom: 2px solid #00a2ff;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .top-bar .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0;
+            width: 100%;
+        }
+
+        .top-bar .navbar img.logo {
+            width: 160px;
+            height: auto;
+            display: block;
+        }
+
+        .top-bar .navbar ul {
+            list-style: none;
+            display: flex;
+            gap: 24px;
+            margin: 0;
+            padding: 0;
+        }
+
+        .top-bar .navbar ul li a {
+            color: #ffffff;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 14px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            transition: color 0.2s ease;
+        }
+
+        .top-bar .navbar ul li a:hover {
+            color: #33b5ff;
+        }
+
+        /* 2. Background Photo Banner spaced cleanly ABOVE the photo reel */
+        .banner {
+            width: 100%;
+            min-height: 320px;
+            height: auto;
+            padding: 60px 20px;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+
+        /* Dark overlay so the Gallery title is easy to read over the background photo */
+        .banner::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.55);
+            z-index: 1;
+        }
+
+        .banner-text {
+            position: relative;
+            z-index: 2;
+        }
+
+        h1#gallery {
+            font-size: 3rem;
+            margin: 0 0 10px 0;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .banner-text p {
+            color: #d9d9d9;
+            font-size: 1.1rem;
+            margin: 0;
+        }
+
+        /* 3. Photo Reel Section below the banner */
+        .gallery-section {
+            background-color: #0d0d0d;
+            padding: 50px 20px;
+            border-top: 1px solid #1c1c1c;
+            border-bottom: 1px solid #1c1c1c;
         }
 
         .gallery {
-            width: 100%;
-            height: 100vh; /* Full viewport height */
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            max-width: 1000px;
+            margin: 0 auto;
             overflow: hidden;
             position: relative;
-            
+            border-radius: 10px;
         }
 
         .gallery-images {
             display: flex;
-            transition: transform 1s ease;
+            transition: transform 0.6s ease-in-out;
+            gap: 20px;
         }
 
         .gallery-images img {
-            width: 60%;  /* Adjust width to make images smaller */
-            max-width: 400px; /* Maximum width for images */
-            height: auto; /* Preserve aspect ratio */
-            object-fit: contain; /* Ensures images stay proportional */
-            margin: 0 10px;
+            flex: 0 0 380px;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 8px;
+            border: 1px solid #2a2a2a;
         }
 
         .prev, .next {
             position: absolute;
             top: 50%;
             transform: translateY(-50%);
-            background-color: rgba(0, 0, 0, 0.5);
-            color: white;
+            background-color: rgba(0, 0, 0, 0.7);
+            color: #ffffff;
             font-size: 24px;
-            padding: 10px;
+            padding: 12px 16px;
             cursor: pointer;
+            border-radius: 6px;
+            user-select: none;
+            transition: background-color 0.2s ease;
+            z-index: 10;
+        }
+
+        .prev:hover, .next:hover {
+            background-color: #00a2ff;
         }
 
         .prev {
-            left: 10px;
+            left: 12px;
         }
 
         .next {
-            right: 10px;
+            right: 12px;
         }
 
+        /* 4. Bottom Bar with Book Now Button & Socials */
         .bottombar {
-          padding: 0;
-                   margin: 0;
-                   display: flex;                  
-                   justify-content: center;
-                   position: relative;
-                   top: 400px;    
-            
+            background-color: #000000;
+            padding: 40px 20px;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 24px;
         }
 
-        .social-icons a {
-            margin: 0 10px;
+        .hcp-button {
+            background-color: #00a2ff;
+            color: #ffffff;
+            border: none;
+            font-size: 18px;
+            font-weight: bold;
+            padding: 14px 36px;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background-color 0.2s ease, transform 0.2s ease;
         }
-        
+
+        .hcp-button:hover {
+            background-color: #33b5ff;
+            transform: translateY(-2px);
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+
+        .social-icons img {
+            width: 42px;
+            height: 42px;
+            transition: transform 0.2s ease;
+        }
+
+        .social-icons img:hover {
+            transform: scale(1.1);
+        }
+
+        /* Mobile Adjustments */
         @media screen and (max-width: 768px) {
-    h1#gallery {
-        font-size: 2rem; /* Smaller font size for header */
-        margin-top: 170px; /* Adjust this value to move the header down (previously was 120px + 50px adjustment) */
-    }
+            .top-bar {
+                padding: 12px 15px;
+            }
 
-    .gallery {
-        height: auto;  /* Let the gallery grow naturally on smaller screens */
-        padding-bottom: 70px; /* Ensure space for social icons */
-        overflow-x: hidden;
-        
-    }
-            
-            
-        
+            .top-bar .navbar {
+                flex-direction: column;
+                gap: 12px;
+            }
+
+            .top-bar .navbar ul {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 14px;
+            }
+
+            .banner {
+                min-height: 220px;
+                padding: 40px 15px;
+            }
+
+            h1#gallery {
+                font-size: 2rem;
+            }
+
+            .gallery-images img {
+                flex: 0 0 100%;
+                height: 260px;
+            }
+        }
     </style>
 </head>
 
 <body>
-    <div class="banner">
+
+    <!-- Top Black Navigation Bar -->
+    <header class="top-bar">
         <div class="navbar">
-            <img src="images/mobile%20mechanic.jpg" class="logo"> 
+            <img src="images/mobile%20mechanic.jpg" alt="Deeskey Auto Service Logo" class="logo">
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="About.html">About</a></li>
@@ -116,62 +266,73 @@
                 <li><a href="blog.html">Blog</a></li>
             </ul>
         </div>
-    
-        <div class="content">
-            <h1 id="gallery">Gallery</h1>
-            <div class="gallery">
-                <div class="gallery-images">
-                    <img src="images/oil%20change.PNG" alt="Image 1">
-                    <img src="images/oilpan.jpg" alt="Image 1">
-                    <img src="images/soldering.PNG" alt="Image 1">
-                    <img src="images/electrical%20panel.jpg" alt="Image 1">
-                    <img src="images/strut.jpg" alt="Image 1">
-                    <img src="images/brakes.PNG" alt="Image 1">
-                    <img src="images/runout%20measurment.PNG" alt="Image 1">
-                    <img src="images/sparkplugs.PNG" alt="Image 1">
-                    <img src="images/oring%20replacment.PNG" alt="Image 1">
-                    <img src="images/soldering.jpeg" alt="Image 1">
-                     <img src="images/airfilter.jpeg" alt="Image 1">
-                     <img src="images/belttensioner.jpeg" alt="Image 1">
-                     <img src="images/suspensionjob.jpeg" alt="Image 1">
-                    
-                   
-                </div>
-                <span class="prev" onclick="moveSlide(-1)">&#10094;</span>
-                <span class="next" onclick="moveSlide(1)">&#10095;</span>
-            </div>
-        </div>
-    </div>
+    </header>
 
-    <div class="bottombar">
+    <!-- Background Photo Banner (uses your style.css .banner background image) -->
+    <section class="banner">
+        <div class="banner-text">
+            <h1 id="gallery">Gallery</h1>
+            <p>Recent mobile auto maintenance and repairs across Utah County</p>
+        </div>
+    </section>
+
+    <!-- Photo Reel Section -->
+    <section class="gallery-section">
+        <div class="gallery">
+            <div class="gallery-images">
+                <img src="images/oil%20change.PNG" alt="Mobile oil change service">
+                <img src="images/oilpan.jpg" alt="Oil pan service">
+                <img src="images/soldering.PNG" alt="Automotive electrical soldering">
+                <img src="images/electrical%20panel.jpg" alt="Vehicle electrical panel diagnostics">
+                <img src="images/strut.jpg" alt="Strut and suspension replacement">
+                <img src="images/brakes.PNG" alt="Brake pad and rotor service">
+                <img src="images/runout%20measurment.PNG" alt="Brake rotor runout measurement">
+                <img src="images/sparkplugs.PNG" alt="Spark plug replacement">
+                <img src="images/oring%20replacment.PNG" alt="O-ring replacement">
+                <img src="images/soldering.jpeg" alt="Wiring repair">
+            </div>
+            <span class="prev" onclick="moveSlide(-1)">&#10094;</span>
+            <span class="next" onclick="moveSlide(1)">&#10095;</span>
+        </div>
+    </section>
+
+    <!-- Bottom Bar -->
+    <footer class="bottombar">
+        <script async src="https://online-booking.housecallpro.com/script.js?token=7aab2044499a4e8d910e0e03a011c66c&orgName=Deeskey-Auto-Service"></script>
+        <button
+            data-token="7aab2044499a4e8d910e0e03a011c66c"
+            data-orgname="Deeskey-Auto-Service"
+            class="hcp-button"
+            onclick="HCPWidget.openModal()">
+            Book Now
+        </button>
+
         <div class="social-icons">
             <a class="socialicon" href="https://www.instagram.com/deeskey95/" target="_blank">
-                <img src="images/instagram%20icon.png" alt="Instagram" width="50">
+                <img src="images/instagram%20icon.png" alt="Instagram">
             </a>
             <a class="socialicon" href="https://www.facebook.com/profile.php?id=100078760184001" target="_blank">
-                <img src="images/fb%20icon.png" alt="Facebook" width="50">
-            </a>
-            <script id="setmore_script" type="text/javascript" src="https://storage.googleapis.com/fullintegration-live/webComponentAppListing/Container/setmoreIframeLive.js"></script>
-            <a id="Setmore_button_iframe" href="https://booking.setmore.com/scheduleappointment/158111b7-2d72-4b56-a40f-4d221399d1cb">
-                <img border="none" src="https://assets.setmore.com/setmore/images/2.0/Settings/book-now-black.svg" alt="Book an appointment with Deeskey Customs using Setmore"/>
+                <img src="images/fb%20icon.png" alt="Facebook">
             </a>
         </div>
-    </div>
+    </footer>
 
     <script>
         let currentSlide = 0;
-        const images = document.querySelector('.gallery-images');
-        const totalImages = document.querySelectorAll('.gallery-images img').length;
+        const track = document.querySelector('.gallery-images');
+        const slides = document.querySelectorAll('.gallery-images img');
+        const totalImages = slides.length;
 
         function moveSlide(step) {
             currentSlide = (currentSlide + step + totalImages) % totalImages;
-            images.style.transform = `translateX(-${currentSlide * 420}px)`; // Adjusted for smaller images
+            const slideWidth = slides[0].offsetWidth + 20; // image width + 20px gap
+            track.style.transform = `translateX(-${currentSlide * slideWidth}px)`;
         }
 
-        // Optional: Automatically cycle through the images every 3 seconds
+        // Automatically cycle through images every 3.5 seconds
         setInterval(() => {
             moveSlide(1);
-        }, 3000);
+        }, 3500);
     </script>
 
 </body>
